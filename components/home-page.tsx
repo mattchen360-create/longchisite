@@ -2,7 +2,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { site, solutions, products } from "@/content/site";
 import { ProductCard } from "@/components/product-card";
 import { EnquiryForm } from "@/components/enquiry-form";
-import { HomeHero } from "@/components/home-hero";
+import { HomeHero } from "@/components/solution-atlas";
 import { HomeSolutions } from "@/components/home-solutions";
 export function HomePage() {
   return (

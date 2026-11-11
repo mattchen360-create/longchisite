@@ -1,5 +1,5 @@
 import { Mail, ArrowUpRight } from "lucide-react";
-import { site, getSolution } from "@/content/site";
+import { site, getSolution, solutions } from "@/content/site";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
@@ -10,9 +10,15 @@ export const metadata = pageMetadata(
 export default async function Contact({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; lines?: string }>;
 }) {
-  const { category } = await searchParams;
+  const { category, lines } = await searchParams;
+  const requested = typeof lines === "string" ? lines.split(",").slice(0, 4) : [];
+  const selectedLines = solutions.filter((s) => requested.includes(s.slug));
+  const selectedCategory = selectedLines.length > 1 ? "multiple" : selectedLines[0]?.slug || (category === "multiple" || getSolution(category || "") ? category : "") || "";
+  const initialMessage = selectedLines.length
+    ? `I am interested in: ${selectedLines.map((s) => s.name).join(", ")}.\n\nApplication / site type: \nEstimated quantities: \nInstallation requirements: `
+    : "";
   return (
     <main id="main-content" className="container section contact-grid">
       <div>
@@ -61,7 +67,9 @@ export default async function Contact({
         </div>
       </div>
       <EnquiryForm
-        category={category && getSolution(category) ? category : ""}
+        category={selectedCategory}
+        initialMessage={initialMessage}
+        selectedLines={selectedLines.map((s) => s.name)}
       />
     </main>
   );

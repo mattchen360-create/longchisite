@@ -1,0 +1,43 @@
+{
+  "generated_date": "2026-11-11",
+  "tool": "Built-in image_gen",
+  "intent": "Single newly generated coherent 3D architectural campus concept",
+  "prompt": "Use case: stylized-concept. Asset type: a single original premium architectural scale-model 3D illustration for a website's interactive solution-atlas hero, not a UI mockup. Create a complete coherent commercial campus in a wide 3:2 landscape composition, ideally native 1536x1024. Elevated 35-degree camera angle showing an elegant three-quarter isometric view. One central sculpted modern two-storey office with blue-grey glass, white stone, clean precise metal details; a surrounding curved asphalt access road and miniature well-maintained trees and planted islands. Clearly arrange four distinct but physically connected zones: LEFT foreground, a landscaped approach road lined with slender LED streetlight poles; RIGHT upper roadway, one modest generic unbranded radar-feedback roadside sign with a plain dark display, no numbers or writing; RIGHT foreground, a parking entry with a slim generic barrier gate and several understated parked cars; LEFT upper/central close to the building, a clearly visible pedestrian entry with glass speed-gate lanes, potentially through a physically coherent open/cutaway lobby facade. All infrastructure belongs to one integrated campus, not four separate panels or disconnected miniatures. Entire campus sits on one floating shallow ivory architectural-model base with softly rounded corners; show the entire base, roads, trees and building with breathing room, crop none of them. Background a pale cool periwinkle-to-light-blue studio gradient. Calm warm sunlight, subtle soft architectural shadows, realistic physically based materials, beautifully tactile tiny landscaping, convincing detailed asphalt and stone, premium architectural competition render, elegant strong visual depth and visual clarity at webpage scale. Understated yellow accents on a few infrastructure elements, no saturated toy-like colors. NO labels, NO text, NO letters, NO numbers, NO brand logos, NO network lines, NO UI, NO map pins or markers, NO cartoon styling, NO people/faces, NO sci-fi or neon. This is conceptual application architecture, not exact branded equipment and not a real completed project.",
+  "built_in_source_absolute_path": "C:\\Users\\77945\\.codex\\generated_images\\01a1c927-21fd-7a01-a261-0728195bc66b\\exec-3e4e58dc-77c9-4c3e-b0c1-783f6839dc60.png",
+  "original_relative_path": "outputs/redesign-originals/campus-atlas-original.png",
+  "web_relative_path": "public/images/redesign/campus-atlas.webp",
+  "original_dimensions": [
+    1536,
+    1024
+  ],
+  "web_dimensions": [
+    1536,
+    1024
+  ],
+  "original_bytes": 2827670,
+  "web_bytes": 361842,
+  "original_sha256": "45a23183772cf9eed8b8ef283d70f99f5b47d03f82a3d0bd2cb608f28df40cdd",
+  "web_sha256": "0209ce3b6cda0f2fff88f2d4ece44372f6a547b6a4f4b9361b879e7a5e04d179",
+  "postprocessing": "Whole-image WebP quality88 encoding only; no cropping, retouching or repainting; max dimension1800",
+  "visually_inspected": true,
+  "inspection": "Complete ivory base visible; central two-storey glass campus building; streetlights left foreground; unbranded blank roadside feedback device upper right; parking barrier lower right; visible glass pedestrian gates near left-side lobby; no labels, numbers, logos or pins.",
+  "usage": "Conceptual application atlas only; not a real completed project or exact branded product representation.",
+  "suggested_hotspot_percentages": {
+    "lighting": {
+      "x": 29,
+      "y": 64
+    },
+    "traffic": {
+      "x": 91,
+      "y": 30
+    },
+    "parking": {
+      "x": 64,
+      "y": 65
+    },
+    "access": {
+      "x": 32,
+      "y": 45
+    }
+  }
+}

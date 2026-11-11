@@ -7,10 +7,14 @@ export function EnquiryForm({
   category = "",
   model = "",
   compact = false,
+  initialMessage = "",
+  selectedLines = [],
 }: {
   category?: string;
   model?: string;
   compact?: boolean;
+  initialMessage?: string;
+  selectedLines?: string[];
 }) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
@@ -112,6 +116,7 @@ export function EnquiryForm({
               equipment and configuration.
             </p>
           </div>
+          {selectedLines.length > 0 && <p className="brief-prefill">Your selected lines: <strong>{selectedLines.join(", ")}</strong>. Add your site details below.</p>}
           <div className="form-grid">
             <label>
               Name
@@ -171,6 +176,7 @@ export function EnquiryForm({
               name="message"
               rows={3}
               maxLength={4000}
+              defaultValue={initialMessage}
               placeholder={
                 model
                   ? `Quantity, location or questions about ${model}…`
