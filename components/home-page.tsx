@@ -1,132 +1,15 @@
-import {
-  ArrowUpRight,
-  ArrowDown,
-  MoveRight,
-  Check,
-  Route,
-  CarFront,
-  ShieldCheck,
-  Lightbulb,
-} from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { site, solutions, products } from "@/content/site";
-import { SolutionCard } from "@/components/solution-card";
 import { ProductCard } from "@/components/product-card";
 import { EnquiryForm } from "@/components/enquiry-form";
+import { HomeHero } from "@/components/home-hero";
+import { HomeSolutions } from "@/components/home-solutions";
 export function HomePage() {
   return (
     <main id="main-content">
-      <section className="home-hero container">
-        <div className="hero-copy">
-          <div className="hero-kicker">
-            <span />
-            Connected thinking. Practical solutions.
-          </div>
-          <h1>
-            Smarter spaces.
-            <br />
-            From the road
-            <br />
-            to the entrance.
-          </h1>
-          <p>
-            Lighting, traffic safety, parking and access control.
-            <br className="desktop-break" /> Four product lines. Your project at
-            the centre.
-          </p>
-          <div className="hero-actions">
-            <a href="/solutions/" className="button">
-              Find your solution <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
-            <a href="/contact/" className="text-link">
-              Talk to our team <MoveRight size={18} aria-hidden="true" />
-            </a>
-          </div>
-          <a className="hero-scroll" href="#solutions">
-            <ArrowDown size={16} aria-hidden="true" /> Explore the four product
-            lines
-          </a>
-        </div>
-        <div className="hero-stage" aria-label="LONGCHI product lines">
-          <div className="stage-line" />
-          <div className="stage-label stage-label-top">
-            <Lightbulb size={15} aria-hidden="true" /> Illuminate
-          </div>
-          <div className="stage-main">
-            <img
-              src="/images/led-ab80.webp"
-              alt="LONGCHI LED street light"
-              width="1200"
-              height="1200"
-              fetchPriority="high"
-            />
-          </div>
-          <div className="stage-radar">
-            <img
-              src="/images/radar-ld01.webp"
-              alt="LONGCHI radar speed feedback sign"
-              width="1200"
-              height="1200"
-              fetchPriority="high"
-            />
-          </div>
-          <div className="stage-parking">
-            <img
-              src="/images/parking-barrier.webp"
-              alt="Vehicle parking barrier"
-              width="900"
-              height="900"
-            />
-          </div>
-          <div className="stage-label stage-label-bottom">
-            <CarFront size={15} aria-hidden="true" /> Welcome
-          </div>
-          <div className="stage-note">
-            <span className="stage-note-dot" />
-            Designed around real places.
-          </div>
-        </div>
-      </section>
-      <div className="pillar-strip">
-        <div className="container">
-          {[
-            { icon: Lightbulb, text: "Smart lighting" },
-            { icon: Route, text: "Traffic safety" },
-            { icon: CarFront, text: "Smart parking" },
-            { icon: ShieldCheck, text: "Access control" },
-          ].map((v, i) => (
-            <a href={`/solutions/${solutions[i].slug}/`} key={v.text}>
-              <v.icon size={21} aria-hidden="true" />
-              <span>{v.text}</span>
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-      </div>
-      <section id="solutions" className="section container">
-        <div className="section-intro">
-          <div>
-            <span className="eyebrow">Our solutions</span>
-            <h2>
-              Every part of your site.
-              <br />
-              Considered together.
-            </h2>
-          </div>
-          <p>
-            Start with the challenge you need to solve.
-            <br />
-            Explore the equipment, define the requirements,
-            <br />
-            and build a clear project brief with us.
-          </p>
-        </div>
-        <div className="solutions-grid">
-          {solutions.map((s) => (
-            <SolutionCard key={s.slug} solution={s} />
-          ))}
-        </div>
-      </section>
-      <section className="project-approach section">
+      <HomeHero />
+      <HomeSolutions />
+      <section className="project-approach section v2-approach">
         <div className="container approach-grid">
           <div className="approach-image">
             <img
@@ -141,8 +24,9 @@ export function HomePage() {
           <div className="approach-copy">
             <span className="eyebrow">The project comes first</span>
             <h2>
-              Less guesswork.
-              <br />A better starting point.
+              From requirements.
+              <br />
+              To the right equipment.
             </h2>
             <p>
               Choosing equipment starts with understanding the place it needs to
@@ -174,7 +58,7 @@ export function HomePage() {
         <div className="section-intro">
           <div>
             <span className="eyebrow">Inside the range</span>
-            <h2>A closer look at the equipment.</h2>
+            <h2>Compare the details. Choose with confidence.</h2>
           </div>
           <a href="/products/" className="text-link">
             Explore products <ArrowUpRight size={18} aria-hidden="true" />
@@ -231,9 +115,9 @@ export function HomePage() {
         <div className="enquiry-intro">
           <span className="eyebrow">Let’s build the brief</span>
           <h2>
-            Your next project
+            Let’s talk about
             <br />
-            starts with a conversation.
+            your next project.
           </h2>
           <p>
             One product line or a complete site requirement. Tell us what you

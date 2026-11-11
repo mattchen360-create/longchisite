@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Solution } from "@/content/site";
+import { solutionVisuals } from "@/content/visuals";
 export function SolutionCard({ solution: s }: { solution: Solution }) {
   return (
     <a
@@ -12,10 +13,10 @@ export function SolutionCard({ solution: s }: { solution: Solution }) {
       </div>
       <div className="solution-card-image">
         <img
-          src={s.image}
-          width="600"
-          height="600"
-          alt={s.imageAlt}
+          src={solutionVisuals[s.slug].scene}
+          width="1536"
+          height="1024"
+          alt={solutionVisuals[s.slug].alt}
           loading="lazy"
         />
       </div>

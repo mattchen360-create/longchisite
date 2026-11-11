@@ -2,6 +2,7 @@ import { ArrowUpRight, Check, ArrowDown, MessageSquare } from "lucide-react";
 import { products, type Solution } from "@/content/site";
 import { ProductCard } from "@/components/product-card";
 import { EnquiryForm } from "@/components/enquiry-form";
+import { solutionVisuals } from "@/content/visuals";
 export function SolutionPage({
   solution: s,
   campaign = false,
@@ -10,12 +11,13 @@ export function SolutionPage({
   campaign?: boolean;
 }) {
   const models = products.filter((p) => p.category === s.slug);
+  const visual = solutionVisuals[s.slug];
   return (
     <main
       id="main-content"
       className={`solution-page ${campaign ? "landing-page" : ""}`}
     >
-      <section className="container solution-hero">
+      <section className="container solution-hero v2-solution-hero">
         <div>
           <nav className="breadcrumbs" aria-label="Breadcrumb">
             <a href="/">Home</a>
@@ -36,8 +38,7 @@ export function SolutionPage({
           <p>{s.description}</p>
           <div className="hero-actions">
             <a href="#enquire" className="button">
-              Discuss your {s.shortName.toLowerCase()} project{" "}
-              <ArrowUpRight size={17} />
+              Get a project quote <ArrowUpRight size={17} />
             </a>
             <a href="#explore" className="text-link">
               Explore the options <ArrowDown size={16} />
@@ -46,13 +47,20 @@ export function SolutionPage({
         </div>
         <div className={`solution-hero-image image-${s.slug}`}>
           <img
-            src={s.image}
-            alt={s.imageAlt}
-            width="1200"
-            height="1200"
+            src={visual.scene}
+            alt={visual.alt}
+            width="1536"
+            height="1024"
             fetchPriority="high"
           />
-          <div className="image-caption">{s.label}</div>
+          <span className="v2-scene-note">Illustrative application</span>
+          <div className="v2-landing-product">
+            <img src={s.image} width="220" height="220" alt={s.imageAlt} />
+            <div>
+              <strong>{s.name}</strong>
+              <span>Explore equipment & configuration</span>
+            </div>
+          </div>
         </div>
       </section>
       <section className="application-strip">

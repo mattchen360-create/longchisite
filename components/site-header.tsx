@@ -49,7 +49,7 @@ export function SiteHeader() {
             className="button button-small header-cta"
             href={campaign ? "#enquire" : "/contact/"}
           >
-            Discuss your project <ArrowUpRight size={15} aria-hidden="true" />
+            Request a quote <ArrowUpRight size={15} aria-hidden="true" />
           </a>
           {!campaign && (
             <button

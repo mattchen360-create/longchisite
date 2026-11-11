@@ -106,8 +106,11 @@ export function EnquiryForm({
         >
           <div className="form-heading">
             <span className="eyebrow">Your project starts here</span>
-            <h3>Tell us what you need.</h3>
-            <p>Share a few details so we can help you take the next step.</p>
+            <h3>Get your project quote.</h3>
+            <p>
+              Tell us the product line and project location. We’ll help with
+              equipment and configuration.
+            </p>
           </div>
           <div className="form-grid">
             <label>

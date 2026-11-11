@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-11",
+  "assets": [
+    {
+      "key": "campus-hero",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium international infrastructure website hero, standalone illustrative application photograph, not a webpage or interface. Create one landscape photograph with a 3:2 aspect ratio. A contemporary European or Australian commercial campus: an elegant restrained glass and brushed-metal office facade, a curving access road with slim LED street-light poles, neatly planted traffic islands, a discreet parking entrance and pedestrian entrance naturally visible in the middle ground. Bright natural late-afternoon light, gentle warm sunlight on physically believable white concrete, pale stone, glass and silver metal, with blue-sky reflections. Calm architectural editorial photography, precise perspective, strong depth, realistic botanical texture, carefully composed with the campus and road as the subject. Premium, clean and quietly confident, like a commissioned architectural magazine photograph. No graphics, no overlays, no logos, no readable signage, no watermark, no close-up people or identifiable faces, no neon, no futuristic vehicles, no science-fiction infrastructure, no exaggerated HDR. This is an illustrative application concept, not a claimed real completed project.",
+      "original_relative_path": "outputs/redesign-originals/campus-hero-original.png",
+      "web_relative_path": "public/images/redesign/campus-hero.webp",
+      "original_dimensions": [
+        1536,
+        1024
+      ],
+      "web_dimensions": [
+        1536,
+        1024
+      ],
+      "original_bytes": 3207621,
+      "web_bytes": 474674,
+      "original_sha256": "206e29ef14b0be96bde326856b469c17e43d626928aad5cd1037b7df1e60c79c",
+      "web_sha256": "5df4e6ff53c7827e332e93622de0b2de51120f57b5e0acfaa18527fe922a2df3",
+      "tool": "Built-in image_gen",
+      "intent": "New image generation; no reference or edit targets",
+      "postprocessing": "Whole-image WebP format encoding only, quality88; no cropping/repainting/retouching",
+      "visually_inspected": true,
+      "usage": "Illustrative application concept; not a real completed LONGCHI project or exact-model representation."
+    },
+    {
+      "key": "traffic-scene",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium infrastructure marketing website application photograph, standalone illustrative scene, not a webpage or UI mockup. Generate one landscape image at 3:2 aspect ratio. A clean private commercial-campus roadway with a gentle bend, mature trees and tidy landscaping along the approach. In a natural roadside position stands a generic unbranded radar speed-feedback device: a modest dark display on a simple pole with a clear amber numeric speed readout, no words required, no logo, no resemblance requirement to any exact manufacturer's model. Show the device in realistic proportion to the roadway rather than a floating product close-up. Contemporary low-rise campus architecture in the background, one distant ordinary vehicle for scale if appropriate. Natural daylight, crisp real asphalt, glass, powder-coated metal, tactile leaves and warm neutral concrete. Editorial architectural photography, believable engineering details and perspective, calm premium blue/white palette and natural green. No text overlays, no diagrams, no watermark, no readable signs or number plates, no identifiable faces, no neon, no futuristic elements, no implausible glowing road lines. It must be understood as an illustrative application concept, not a real completed LONGCHI project.",
+      "original_relative_path": "outputs/redesign-originals/traffic-scene-original.png",
+      "web_relative_path": "public/images/redesign/traffic-scene.webp",
+      "original_dimensions": [
+        1536,
+        1024
+      ],
+      "web_dimensions": [
+        1536,
+        1024
+      ],
+      "original_bytes": 3311941,
+      "web_bytes": 497464,
+      "original_sha256": "5686a0ee18da0314aeea8aa611292ad6eb9d032fc5a39902e7962e3d952f1ee7",
+      "web_sha256": "9742ae5672401f181c5605277883f3b313b0f254e1ad8d765f59a3c7e43e65a7",
+      "tool": "Built-in image_gen",
+      "intent": "New image generation; no reference or edit targets",
+      "postprocessing": "Whole-image WebP format encoding only, quality88; no cropping/repainting/retouching",
+      "visually_inspected": true,
+      "usage": "Illustrative application concept; not a real completed LONGCHI project or exact-model representation."
+    }
+  ],
+  "total_web_bytes": 972138
+}

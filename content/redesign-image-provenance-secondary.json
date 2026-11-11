@@ -1,0 +1,30 @@
+{
+  "createdDate": "2026-11-11",
+  "method": "Built-in image_gen; no API key or CLI fallback",
+  "use": "Illustrative application scenes only; not completed-project evidence or exact model depictions",
+  "postProcessing": "Whole-image WebP encoding at quality 85; no cropping, compositing, recolouring or substantive edits",
+  "images": [
+    {
+      "asset": "public/images/redesign/parking-scene.webp",
+      "original": "outputs/redesign-originals/parking-scene-original.png",
+      "generationSource": "C:/Users/77945/.codex/generated_images/01a1c957-ef45-7a82-aae5-fe8f6852cab7/exec-d47b1ca8-7fde-4b09-9a5d-71e120a480e0.png",
+      "prompt": "Use case: ads-marketing. Asset type: premium B2B infrastructure website application photograph, wide landscape 3:2 composition. Create a highly believable architectural editorial photograph of a contemporary commercial parking entrance in Europe or Australia. A clean generic brushed-metal vehicle barrier gate with one physically plausible straight boom raised at an angle stands in the foreground, with a single understated charcoal passenger car approaching in the entry lane. Elegant modern glass office architecture behind, carefully maintained low landscaped islands and native grasses, clean asphalt and neat paving, bright crisp late-afternoon daylight with soft warm highlights and cooler blue-grey glass. Human eye-level, natural camera perspective, refined materials and realistic construction details. Calm premium advertising image with strong depth and a clear subject. No branding, no readable signage, no letters, no numbers, no logos, no watermark, no graphics, no user interface, no neon, no futuristic fantasy. This is an illustrative application scene, not a representation of an actual completed project or any exact branded product. Opaque background.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "webpBytes": 378338
+    },
+    {
+      "asset": "public/images/redesign/access-scene.webp",
+      "original": "outputs/redesign-originals/access-scene-original.png",
+      "generationSource": "C:/Users/77945/.codex/generated_images/01a1c957-ef45-7a82-aae5-fe8f6852cab7/exec-ce410d40-dd20-463e-88bc-3bbcb2091010.png",
+      "prompt": "Use case: ads-marketing. Asset type: premium international B2B infrastructure website application photograph, wide landscape 3:2. Create a photorealistic architectural editorial photograph inside an elegant contemporary commercial office lobby. Foreground and middle ground show three refined stainless-steel and transparent-glass pedestrian speed-gate lanes with small generic access terminals, realistically constructed and neatly aligned to guide people from the arrival area toward office lifts. Bright natural daylight through a generous glass facade, restrained warm stone floor, cooler blue-grey glass, soft reflections and rich physically believable metal texture, a little planting at the edges. Professional architectural photography at natural eye level, precise verticals, attractive angled perspective and strong depth, quiet premium mood, human scale. No people or recognizable faces. No readable text or signs, no letters, no numbers, no logos, no branding, no watermark, no user interface or technical overlays, no neon, no science fiction. This is an illustrative application scene, not an actual completed project or any exact branded equipment model. Opaque background.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "webpBytes": 176000
+    }
+  ]
+}

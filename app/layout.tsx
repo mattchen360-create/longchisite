@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ConsentManager } from "@/components/consent-manager";
 import { site } from "@/content/site";
 import "./site.css";
+import "./redesign.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),
