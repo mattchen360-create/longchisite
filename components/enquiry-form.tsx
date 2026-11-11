@@ -10,6 +10,7 @@ export function EnquiryForm({
   initialMessage = "",
   selectedLines = [],
   purpose = "project",
+  initialCountry = "",
 }: {
   category?: string;
   model?: string;
@@ -17,6 +18,7 @@ export function EnquiryForm({
   initialMessage?: string;
   selectedLines?: string[];
   purpose?: "project" | "company";
+  initialCountry?: string;
 }) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
@@ -179,6 +181,7 @@ export function EnquiryForm({
               <span aria-label="required">*</span>
               <input
                 name="country"
+                defaultValue={initialCountry}
                 autoComplete="country-name"
                 required
                 maxLength={80}

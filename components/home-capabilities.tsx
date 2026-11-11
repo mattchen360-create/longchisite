@@ -2,6 +2,7 @@
 import { useState, type KeyboardEvent } from "react";
 import { ArrowUpRight, Check, Wrench, Factory, Users } from "lucide-react";
 import { companyCapabilities } from "@/content/company";
+import { CompanyGallery } from "@/components/company-gallery";
 const icons = [Wrench, Factory, Users];
 export function HomeCapabilities() {
   const [active, setActive] = useState(1);
@@ -79,6 +80,7 @@ export function HomeCapabilities() {
               height={active === 1 ? 738 : 900}
               loading="lazy"
             />
+            <CompanyGallery currentImage={current.image} />
             <figcaption>{current.caption}</figcaption>
           </figure>
           <div className="capability-copy" key={current.key}>

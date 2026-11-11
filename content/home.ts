@@ -97,7 +97,7 @@ export const homeQuestions = [
   },
   {
     q: "Can I combine several product lines in one enquiry?",
-    a: "Yes. Use the product-line selection below our product range to add lighting, traffic, parking and access requirements to one brief. Each product and any connection between systems still needs a project-specific review.",
+    a: "Yes. Use the project brief builder to choose lighting, traffic, parking and access requirements, a destination and your planned timing. Each product and any connection between systems still needs a project-specific review.",
   },
   {
     q: "Can I request custom configurations or integration?",

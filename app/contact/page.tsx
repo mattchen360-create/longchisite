@@ -1,8 +1,9 @@
 import { Mail, ArrowUpRight } from "lucide-react";
-import { site, getSolution, solutions } from "@/content/site";
+import { site, getSolution, solutions, products } from "@/content/site";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { pageMetadata } from "@/lib/seo";
 import { applications, contactTopics } from "@/content/home";
+import { projectCountries, projectSchedules } from "@/content/project-planner";
 export const metadata = pageMetadata(
   "Discuss Your Project",
   "Contact LONGCHI SMART about lighting, traffic safety, parking and access requirements. Request a project-specific equipment quotation.",
@@ -16,9 +17,13 @@ export default async function Contact({
     lines?: string;
     application?: string;
     topic?: string;
+    models?: string;
+    country?: string;
+    schedule?: string;
   }>;
 }) {
-  const { category, lines, application, topic } = await searchParams;
+  const { category, lines, application, topic, models, country, schedule } =
+    await searchParams;
   const requested =
     typeof lines === "string" ? lines.split(",").slice(0, 4) : [];
   const selectedLines = solutions.filter((s) => requested.includes(s.slug));
@@ -35,14 +40,28 @@ export default async function Contact({
           : "") ||
         "";
   const chosenApplication = applications.find((a) => a.slug === application);
+  const requestedModels =
+    typeof models === "string" ? models.split(",").slice(0, 3) : [];
+  const selectedModels = products.filter(
+    (p) => p.category === selectedCategory && requestedModels.includes(p.slug),
+  );
+  const initialCountry =
+    typeof country === "string" &&
+    projectCountries.slice(0, -1).includes(country)
+      ? country
+      : "";
+  const chosenSchedule =
+    typeof schedule === "string" && projectSchedules.includes(schedule)
+      ? schedule
+      : "";
   const chosenTopic =
     typeof topic === "string" && Object.hasOwn(contactTopics, topic)
       ? contactTopics[topic]
       : undefined;
   const initialMessage =
     chosenTopic?.message ||
-    (selectedLines.length
-      ? `I am interested in: ${selectedLines.map((s) => s.name).join(", ")}.\n\nApplication / site type: ${chosenApplication?.name || ""}\nEstimated quantities: \nInstallation requirements: `
+    (selectedLines.length || selectedModels.length
+      ? `${selectedLines.length ? `I am interested in: ${selectedLines.map((s) => s.name).join(", ")}.\n` : ""}${selectedModels.length ? `Models to discuss: ${selectedModels.map((p) => p.model).join(", ")}.\n` : ""}\nApplication / site type: ${chosenApplication?.name || ""}\n${chosenSchedule ? `Planned timing: ${chosenSchedule}\n` : ""}Estimated quantities: \nInstallation requirements: `
       : "");
   return (
     <main id="main-content" className="container section contact-grid">
@@ -96,6 +115,7 @@ export default async function Contact({
         initialMessage={initialMessage}
         selectedLines={selectedLines.map((s) => s.name)}
         purpose={companyEnquiry ? "company" : "project"}
+        initialCountry={initialCountry}
       />
     </main>
   );

@@ -12,6 +12,7 @@ import {
 import { HomeCapabilities } from "@/components/home-capabilities";
 import { HomeApplications } from "@/components/home-applications";
 import { HomeResources, HomeFAQ } from "@/components/home-resources";
+import { ProjectPlanner } from "@/components/project-planner";
 export function HomePage() {
   return (
     <main id="main-content">
@@ -20,6 +21,7 @@ export function HomePage() {
       <HomeCapabilities />
       <HomeSolutions />
       <HomeApplications />
+      <ProjectPlanner />
       <HomeQuality />
       <HomeCollaboration />
       <HomeProcess />

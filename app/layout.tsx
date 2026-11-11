@@ -8,6 +8,7 @@ import "./site.css";
 import "./redesign.css";
 import "./home-sections.css";
 import "./brand-editorial.css";
+import "./interactive-modules.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),
