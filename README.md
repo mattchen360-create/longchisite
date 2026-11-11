@@ -36,4 +36,3 @@ Publishing with Sites applies the hosted migrations separately. Generated build 
 - `docs/BUILD-BRIEF.md` — accepted project and brand brief
 
 The initial hosted Site is owner-private. It is a review release, not an active ad destination. Public access, a final domain, actual advertising IDs and verified commercial details are launch connections; the existing company domain is unchanged.
-

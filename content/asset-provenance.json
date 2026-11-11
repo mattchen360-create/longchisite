@@ -1,0 +1,275 @@
+{
+  "date": "2026-11-11",
+  "source_selection_manifest": "E:\\龙弛文件夹\\work\\longchisite-assets-selection.json",
+  "image_policy": "Technical web encoding only. No cropping, generative changes, background removal, recoloring or source overwrites. Logo copied byte-for-byte.",
+  "assets": [
+    {
+      "key": "lc-led-ab80",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\01 智慧照明\\01 道路照明\\01 LED路灯\\LC-LED-AB80\\02 产品图片\\80颗灯珠\\1 (1).png",
+      "output_relative_path": "public/images/led-ab80.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1422242,
+      "output_bytes": 36184,
+      "source_sha256": "238f88a3507e10da9c45cc87b582baed81008512ae9ebeaf1faaaf736b579dbc",
+      "sha256": "393659e01324625fba66b17937f1c2c11627aec5699de67dcf984a84ae33a9d8",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "White background front view; use 80颗灯珠 branch. The same model directory also holds 50LED photos; do not mix."
+    },
+    {
+      "key": "lc-led-aa50",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\01 智慧照明\\01 道路照明\\01 LED路灯\\LC-LED-AA50\\02 产品图片\\路灯白底主图_1000x1000_13张\\streetlight_01_1000x1000.png",
+      "output_relative_path": "public/images/led-aa50.webp",
+      "original_dimensions": [
+        1000,
+        1000
+      ],
+      "output_dimensions": [
+        1000,
+        1000
+      ],
+      "source_bytes": 459168,
+      "output_bytes": 37416,
+      "source_sha256": "ed8e582b02fea91315e0210e5974fd0bc32422f40ab14182a57351ace6b7cfd9",
+      "sha256": "0e183d5d8ea4a7f30a22542bcc70a450c9872e14d47feb933a75c301b591b7a4",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "White background front view, short rounded housing with visible mounting bolts."
+    },
+    {
+      "key": "lc-led-4a1",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\01 智慧照明\\01 道路照明\\01 LED路灯\\LC-LED-4A1 24颗\\02 产品图片\\主图\\4K高清渲染_1比1\\01_square_sources\\1 (1)_square.png",
+      "output_relative_path": "public/images/led-4a1.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1550893,
+      "output_bytes": 46800,
+      "source_sha256": "23ee35cc63bc60df43f95a473b8f10bf9247f596c8aff0b7a94d7a3fca4eb99e",
+      "sha256": "db347cdcb63099d11480046fb821a4209fd009d3a923d477729a5d09f3cdb80b",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Clean oblique 24LED view; parent directory contains dimension graphics for other LED counts, avoid those."
+    },
+    {
+      "key": "lc-jtp-ld01",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\02 智慧交通\\02 雷达测速牌\\LC-JTP-LD01\\02 产品图片\\1 (1).png",
+      "output_relative_path": "public/images/radar-ld01.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1253338,
+      "output_bytes": 69126,
+      "source_sha256": "2a9cfb155a8334765493e26fd4bbf22982eb3e9f523a946abbfe25eec9a9f5bd",
+      "sha256": "5de5a2881df917094b2c846ec0955369870c30264d0fa9f6901b41d5b3c6aa72",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Clean white background yellow sign, reflective 15 and 3-digit display. This is source artwork, not a verified installation photo."
+    },
+    {
+      "key": "lc-jtp-ld02",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\02 智慧交通\\02 雷达测速牌\\LC-JTP-LD02\\02 产品图片\\1 (3).png",
+      "output_relative_path": "public/images/radar-ld02.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1004961,
+      "output_bytes": 47770,
+      "source_sha256": "6c42904f8ad80f9f47965a374b586831162e66743574c8c52ab556059da6b451",
+      "sha256": "2c17106e8e5d7cac3aedac22e7d9b0242b5d82f29092512304ff08c7f229f58b",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Clean white background sign with top beacon and red/blue warning lamps. 1 (1) and 1 (2) have external annotations; avoid them for cards."
+    },
+    {
+      "key": "lc-jtp-cs02h",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\02 智慧交通\\02 雷达测速牌\\LC-JTP-CS02H\\02 产品图片\\主图\\1 (5).png",
+      "output_relative_path": "public/images/radar-cs02h.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1108458,
+      "output_bytes": 68866,
+      "source_sha256": "4c0462226433de242a8a2d04c18204eed84bd0ffee9aec819e83e941b74bd773",
+      "sha256": "c8681096c683fde229875b2e23e9c52087df67ace3692eeb4993d21993507718",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Clean white background full pole with separate camera and illuminator above display; 1 (1) is a system infographic; 1 (3) has solar panels as a configuration option."
+    },
+    {
+      "key": "lc-jtp-cs06h",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\02 产品资料\\02 智慧交通\\02 雷达测速牌\\LC-JTP-CS06H\\02 产品图片\\1 (1).png",
+      "output_relative_path": "public/images/radar-cs06h.webp",
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 1376360,
+      "output_bytes": 121604,
+      "source_sha256": "91f69ee7ac7005273193f25898412807d2bc5c9e419dc0b4cb89dc1df94228ab",
+      "sha256": "e7f61225a23ef8dddaa4aff4e50ebe69865a9499c4f43f6566447a6d9b44581f",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Clean white background integrated sign, camera, illuminator, four warning lamps, MPH shown; do not imply all units are MPH only."
+    },
+    {
+      "key": "parking-barrier",
+      "source_absolute_path": "C:\\Users\\77945\\OneDrive\\Desktop\\停车产品\\停车道闸 (1).png",
+      "output_relative_path": "public/images/parking-barrier.webp",
+      "original_dimensions": [
+        900,
+        900
+      ],
+      "output_dimensions": [
+        900,
+        900
+      ],
+      "source_bytes": 78139,
+      "output_bytes": 6326,
+      "source_sha256": "426d8a08b5211978805252554c5af82547623c299f98cd77f0a7d8433ba17dd4",
+      "sha256": "04773a7938a184e7bbe2b8ed9f5fd92963bc6c84b5dbf36c81f8ebbe419e09ea",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "White background long-arm parking barrier. No verified model number or specs yet."
+    },
+    {
+      "key": "parking-payment-kiosk",
+      "source_absolute_path": "C:\\Users\\77945\\OneDrive\\Desktop\\停车产品\\中央缴费机1.png",
+      "output_relative_path": "public/images/parking-payment.webp",
+      "original_dimensions": [
+        1600,
+        1600
+      ],
+      "output_dimensions": [
+        1200,
+        1200
+      ],
+      "source_bytes": 205620,
+      "output_bytes": 15746,
+      "source_sha256": "234003c5844b6844257dae10b14b8c0b5a93f988d3d84f5365b7a2c02b115fc4",
+      "sha256": "5fdb7fc5bdebb87edbd0d206336d121d65e1d446805d3559404047b8c4177cf1",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "White background payment terminal. Low screen detail; no unverified payment-provider promises."
+    },
+    {
+      "key": "parking-lpr-pillar",
+      "source_absolute_path": "C:\\Users\\77945\\OneDrive\\Desktop\\停车产品\\车牌识别机.png",
+      "output_relative_path": "public/images/parking-anpr.webp",
+      "original_dimensions": [
+        900,
+        900
+      ],
+      "output_dimensions": [
+        900,
+        900
+      ],
+      "source_bytes": 201920,
+      "output_bytes": 10134,
+      "source_sha256": "ce73ad16d0e45093ab035851ec74215d70f43de4b34839409ecda9477cbf8974",
+      "sha256": "2a9cb5830f38a16ac071d6d5a8595c0bbc301fd616582f80f4234260ef015f33",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Slim LPR pillar on light background. Visible display text is fragmented in supplied art; best as small supporting category image."
+    },
+    {
+      "key": "access-category",
+      "source_absolute_path": "C:\\Users\\77945\\Documents\\Codex\\2026-11-10\\e-02-02-02-1-2\\outputs\\通道闸机_人脸识别_左侧留白_1500x600.png",
+      "output_relative_path": "public/images/access-systems.webp",
+      "original_dimensions": [
+        1500,
+        600
+      ],
+      "output_dimensions": [
+        1500,
+        600
+      ],
+      "source_bytes": 865895,
+      "output_bytes": 27690,
+      "source_sha256": "8ba252caaf5a553eeb2427959c7f3a7e302105ba2fe4f83471b272de614dacad",
+      "sha256": "5d8bb390b7fff63af09681cdcde0e8979fe78bb1b98edadfddf693704fe9c669",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Existing white background collection composition with turnstiles and face terminals. Suitable category art; source individual images easco_selected_*.jpg are from EASCO and bear that brand. Do not treat composite as a verified LONGCHI model configuration."
+    },
+    {
+      "key": "factory-assembly",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\01 公司资料\\04 工厂照片\\产线 (6).jpg",
+      "output_relative_path": "public/images/factory-assembly.webp",
+      "original_dimensions": [
+        1920,
+        886
+      ],
+      "output_dimensions": [
+        1600,
+        738
+      ],
+      "source_bytes": 188447,
+      "output_bytes": 134820,
+      "source_sha256": "26af38b792c823fab5c5d368c2b807b49169b8bbf7d5b44fe482b2f3e94e2340",
+      "sha256": "d7acb417fbe0d5432350e07c512b9ab14fde753f4b88a90b869049df93fc996a",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Source photo of working staff on lamp assembly line. Use instead of 二次创作 variants when presenting manufacturing evidence; factory legal entity still needs correct caption."
+    },
+    {
+      "key": "factory-line",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\01 公司资料\\04 工厂照片\\产线 (3).jpg",
+      "output_relative_path": "public/images/factory-line.webp",
+      "original_dimensions": [
+        1440,
+        1080
+      ],
+      "output_dimensions": [
+        1440,
+        1080
+      ],
+      "source_bytes": 105690,
+      "output_bytes": 110394,
+      "source_sha256": "3c81ac5b5c95afbf13976f4b6dfbc1687cb6c1ace8608daafb86ac8f236acdd0",
+      "sha256": "2497d0b78d963009876f173b66568c1a35686ce51e8867467ce4744182829934",
+      "processing": "Whole image resize without crop; WebP quality 85; preserve aspect ratio and ICC when present",
+      "source_notes": "Source wide assembly-line photo, visible fluorescent lights, green floor; dark overall, no need to claim this is Shenzhen specifically."
+    },
+    {
+      "key": "logo-horizontal",
+      "source_absolute_path": "C:\\Users\\77945\\.codex\\skills\\longchi-brand-visuals\\assets\\longchi-logo-horizontal.png",
+      "output_relative_path": "public/images/logo.png",
+      "original_dimensions": [
+        1774,
+        887
+      ],
+      "output_dimensions": [
+        1774,
+        887
+      ],
+      "source_bytes": 842880,
+      "output_bytes": 842880,
+      "source_sha256": "e7e522f24edc2ea1147cade5477e8b72b8fca4e65d107cbd81425b119e9e2e5d",
+      "sha256": "e7e522f24edc2ea1147cade5477e8b72b8fca4e65d107cbd81425b119e9e2e5d",
+      "processing": "Unchanged file copy",
+      "source_notes": "Official existing master; retain aspect ratio, white background and artwork."
+    }
+  ],
+  "total_source_bytes": 10664011,
+  "total_output_bytes": 1575756
+}
