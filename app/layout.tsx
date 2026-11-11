@@ -9,6 +9,7 @@ import "./redesign.css";
 import "./home-sections.css";
 import "./brand-editorial.css";
 import "./interactive-modules.css";
+import "./premium.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),
@@ -31,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="premium-site">
         <SiteHeader />
         {children}
         <SiteFooter />

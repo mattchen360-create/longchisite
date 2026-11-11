@@ -14,13 +14,13 @@
 
 企业首页扩展：`content/company.ts` 管理能力、质量和项目流程；`content/home.ts` 管理应用组合、公司咨询模板和 FAQ。企业实拍位于 `public/images/company/`，逐张来源与哈希见 `content/company-image-provenance.json`。公司介绍页复用企业能力板块。
 
-当前视觉以 `docs/VISUAL-REVISION.zh-CN.md` 为准：龙弛蓝 Banner / 流程 / 页脚、亮蓝切换区、黄色行动按钮、浅蓝与白色内容区，已移除灰绿色。无装饰连接线，保留真实企业图片与大幅 Banner。首屏 `components/home-banner.tsx` 提供四条产品线的手动切换；多产品需求使用下述项目助手。已撤下模型热点首屏和重复页内导航。全局不再加载旧 `ambience.css`、`atlas.css`，当前外观由 `app/brand-editorial.css` 统一。
+当前视觉以 `docs/PREMIUM-REDESIGN.zh-CN.md` 为准，同行研究见 `docs/INDUSTRY-PEER-REVIEW.zh-CN.md`。`components/premium-hero.tsx` 为全幅蓝调场景 Banner + 四产品线切换；`premium-sections.tsx` 提供方案索引、真实企业图文章节与四阶段交付规划。品牌蓝黄、浅蓝和白色体系保留，最后加载 `app/premium.css` 统一字号与桌面/移动端布局。主导航提供点击展开的大菜单与手机原生抽屉，Home 持续可见。公司页、方案页、SEM 落地页与产品/联系页沿用同一视觉系统。新首屏为应用示意，并非已完成项目；素材和完整生成提示词见 `content/premium-image-provenance.json`。
 
 交互增强后，首页产品范围改为 `components/equipment-explorer.tsx`：照明/交通型号取自原 `content/site.ts`，最多比较同一产品线 3 款；停车/门禁仍使用类目资料。比较值保持原文，只合并同义字段标题，不推断缺失参数。
 
 多产品需求现在由 `components/project-planner.tsx` 处理，替代首页原简单复选框。应用建议、产品线、国家、时间均可调整，并带入原询盘；国家和时间允许值来自 `content/project-planner.ts`。比较型号通过 `models` 参数传入，服务器只接受当前产品线下的已知型号。未知预填参数忽略。国家进入 country 字段，应用、型号与时间进入可编辑 message，不需数据库迁移。
 
-`components/company-gallery.tsx` 为现有企业实拍提供 5 张图的原生 dialog 查看，支持方向键、前后按钮、Esc 与关闭后返回入口焦点。交互样式集中在 `app/interactive-modules.css`，沿用已认可的蓝黄配色。首页现在为 12 个主要内容板块。
+`components/company-gallery.tsx` 为现有企业实拍提供 5 张图的原生 dialog 查看，支持方向键、前后按钮、Esc 与关闭后返回入口焦点。交互样式集中在 `app/interactive-modules.css`，沿用已认可的蓝黄配色。首页以 11 个主要章节组织内容；手机型号区可横滑，比较表在弹窗内部滚动。手机联系页表单位于标题之后，联系方式列于表单后。
 
 本地公司资料指向湖南主体；网站国际询盘主体为深圳公司。当前分别标注企业资料来源，不主张已验证的法律/股权关系。不把湖南成立年份、证书或规模转为深圳宣传数字。后续需要添加成立历史、资质墙、案例和工厂规模时，先核实实体、型号、有效期和披露授权，再更新对应内容；不要在公开页面放空白占位或虚构数字。
 
@@ -61,3 +61,6 @@ Analytics 与广告测量同意独立控制。询盘记录不包含未经允许�
 新 Site 先以所有者私有方式发布，方便审阅。它与 longchismart.com 现站独立。正式投放需要确认公开访问、绑定域名、更新 `content/site.ts` 中 origin、填入真实测量标签并验收收件。当前没有改动旧站 DNS。
 
 源代码同时交付到用户提供的 GitHub 私有仓库。Sites 托管源码与 GitHub 交付仓库是两个远端；后续改版应同步同一份经过检查的源代码，避免只更新其中一个。
+
+
+交付咨询：`/contact/?topic=delivery-planning` 带入数量、目的地、日期、包装单证和交接要求；只生成可编辑咨询模板，不自动报价或承诺交期。

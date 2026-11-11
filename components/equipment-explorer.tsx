@@ -98,8 +98,12 @@ export function EquipmentExplorer() {
         </div>
         {models.length > 0 ? (
           <>
+            <p className="prem-browse-hint">Swipe or scroll to explore models. Select up to three to compare.</p>
             <div
               className={`equipment-models ${models.length === 4 ? "equipment-models-four" : ""}`}
+              role="region"
+              aria-label={`${line.name} models`}
+              tabIndex={0}
             >
               {models.map((p) => (
                 <article className="equipment-model" key={p.slug}>

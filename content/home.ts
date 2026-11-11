@@ -84,6 +84,11 @@ export const contactTopics: Record<string, { label: string; message: string }> =
       message:
         "I would like to review quality and project documents.\n\nModel / proposed equipment: \nDestination country: \nTest reports, certificates or documents required: ",
     },
+    "delivery-planning": {
+      label: "Delivery and handover planning",
+      message:
+        "I would like to discuss project delivery and handover.\n\nEquipment / models and quantities: \nDestination country and delivery address / port: \nRequired date and proposed shipping terms: \nPackaging and shipping documents needed: \nHandover and support requirements: ",
+    },
   };
 
 export const homeQuestions = [

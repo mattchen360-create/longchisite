@@ -17,7 +17,7 @@ export function SolutionPage({
       id="main-content"
       className={`solution-page ${campaign ? "landing-page" : ""}`}
     >
-      <section className="container solution-hero v2-solution-hero">
+      <section className="solution-hero v2-solution-hero prem-solution-masthead">
         <div>
           <nav className="breadcrumbs" aria-label="Breadcrumb">
             <a href="/">Home</a>

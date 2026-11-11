@@ -1,0 +1,25 @@
+{
+  "created_date": "2026-11-11",
+  "tool": "Built-in image_gen",
+  "mode": "New image generation; no references or edit targets; not CLI/API",
+  "prompt": "Use case: photorealistic-natural.\nAsset type: one ORIGINAL ultrawide architectural photograph for a full-bleed premium international infrastructure website hero. No webpage or UI. Compose at a true ultrawide 21:9 panoramic landscape ratio.\nScene and subject: a refined contemporary commercial/industrial campus at blue hour, photographed at natural pedestrian eye level along a gently curving access road toward elegant glass and pale-stone buildings. Slender functional street-light poles and warm-white architectural lights are naturally illuminated. A small amount of ordinary traffic and discreet entry detail gives life without clutter.\nComposition: the LEFT 40 percent remains calm and dark, with deep cobalt sky, quiet architectural shadow, and restrained silhouette suitable for large white typography that will be added later. The RIGHT 60 percent contains the clear visual subject: beautifully detailed glass/stone facade, road, planting, warm lighting, and inviting entry. Continuous coherent panorama, no panels or montage.\nLighting and photographic character: premium architectural photography, physically plausible blue-hour exposure, deep cobalt-blue sky balanced with subtle golden warm-white light, tactile real stone, metal, glass and asphalt, believable reflections, layered photographic depth, natural small imperfections. Calm, international and quietly alive. Looks like a commissioned real architectural photograph, NOT an overly slick CGI visualization.\nConstraints: no embedded words, no letters, no logos, no readable signage, no product specifications, no interface markers, no network lines, no data light trails, no watermark, no recognizable faces or readable license plates. Not a bird's-eye city model; no sci-fi, cyberpunk, neon, exaggerated lens flare, or futuristic equipment. This is an illustrative application scene, never a claimed real LONGCHI project and not exact branded products.",
+  "built_in_source_absolute_path": "C:\\Users\\77945\\.codex\\generated_images\\01a1c927-21fd-7a01-a261-0728195bc66b\\exec-496ac1df-b094-4af1-acc3-57b53beeea53.png",
+  "original_relative_path": "outputs/premium-originals/blue-hour-campus-original.png",
+  "web_relative_path": "public/images/premium/blue-hour-campus.webp",
+  "native_dimensions": [
+    1914,
+    822
+  ],
+  "web_dimensions": [
+    1914,
+    822
+  ],
+  "original_bytes": 2241588,
+  "web_bytes": 209020,
+  "original_sha256": "7b6f5f3029960d4f817b96bb971b10c99ee1f20fc03319e2785aff1a70c6d5a5",
+  "web_sha256": "03e13b7a82fe895dc05106d7fc6a8d295bf1473333e35479caa0cd9c43594524",
+  "processing": "Whole-image WebP q88 encoding; max2200px; no crop, repainting, compositing or retouching",
+  "visually_inspected": true,
+  "visual_qa": "Ultrawide near21:9, pedestrian-height viewpoint; left40 percent calm dark cobalt sky and lawn/architectural shadow; right60 percent glass and stone building, warm-white lighting and curved road; ordinary cars and entry details; no embedded text, logos or UI graphics.",
+  "usage": "Illustrative application scene only. Not a real completed LONGCHI project or exact branded equipment."
+}

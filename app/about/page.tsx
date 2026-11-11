@@ -1,10 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
-import {
-  CompanyOverview,
-  HomeQuality,
-  HomeCollaboration,
-} from "@/components/home-company";
-import { HomeCapabilities } from "@/components/home-capabilities";
+import { HomeCollaboration } from "@/components/home-company";
+import { PremiumWork, PremiumDelivery } from "@/components/premium-sections";
+import { PremiumIntro } from "@/components/premium-intro";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
   "About LONGCHI SMART | Company & Capabilities",
@@ -14,29 +11,35 @@ export const metadata = pageMetadata(
 export default function About() {
   return (
     <main id="main-content">
-      <section className="container section">
-        <div className="page-heading">
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <span>/</span>
-            <span aria-current="page">About LONGCHI</span>
-          </nav>
-          <span className="eyebrow">Company & capabilities</span>
-          <h1>
-            Get to know
-            <br />
-            the work behind LONGCHI.
-          </h1>
-          <p>
-            Meet the company, explore the manufacturing profile and start a
-            conversation about the project ahead.
-          </p>
+      <section className="prem-about-masthead">
+        <img
+          src="/images/factory-assembly.webp"
+          alt="Lighting assembly from Hunan LONGCHI company photography"
+          width="1600"
+          height="1000"
+          fetchPriority="high"
+        />
+        <div className="container">
+          <div className="page-heading">
+            <nav className="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <span aria-current="page">About LONGCHI</span>
+            </nav>
+            <span className="eyebrow">Company & capabilities</span>
+            <h1>Meet LONGCHI.</h1>
+            <p>
+              Meet the company, explore the manufacturing profile and start a
+              conversation about the project ahead.
+            </p>
+          </div>
         </div>
+        <small>Hunan LONGCHI manufacturing photography</small>
       </section>
-      <CompanyOverview />
-      <HomeCapabilities />
-      <HomeQuality />
+      <PremiumIntro />
+      <PremiumWork />
       <HomeCollaboration />
+      <PremiumDelivery />
       <section className="container section">
         <div className="home-chapter-heading">
           <div>
