@@ -1,15 +1,15 @@
-/* A quiet industrial identity: solid mineral surfaces, photography and typography. */
+/* LONGCHI blue and yellow, expressed through solid brand surfaces and clear typography. */
 :root {
-  --paper: #e8e8e2;
-  --paper-light: #f3f3ee;
-  --paper-deep: #dbdfd9;
+  --paper: #f2f7ff;
+  --paper-light: #ffffff;
+  --paper-deep: #eaf2ff;
 }
 body {
   background: var(--paper);
   background-image: none;
 }
 .site-header {
-  background: #f9faf7;
+  background: #ffffff;
   border: 0;
   backdrop-filter: none;
   box-shadow: none;
@@ -66,12 +66,13 @@ body {
 .nav-dropdown {
   border: 0;
   border-radius: 0;
-  background: #f9faf7;
+  background: #ffffff;
   box-shadow: 0 9px 18px #001a6610;
 }
 
 .home-banner {
-  background: #dddfd9;
+  background: #0028a0;
+  color: #ffffff;
 }
 .banner-stage {
   display: grid;
@@ -137,14 +138,15 @@ body {
   position: absolute;
   right: 18px;
   bottom: 16px;
-  background: #f3f3eefa;
+  background: #fffffff2;
   color: var(--blue);
   padding: 5px 9px;
   font-size: 9px;
   line-height: 1.5;
 }
 .banner-selector {
-  background: #d2d7cf;
+  background: #0070e8;
+  color: #ffffff;
 }
 .banner-selector > div {
   display: flex;
@@ -173,11 +175,12 @@ body {
   font-weight: 600;
 }
 .banner-selector button[aria-selected="true"] {
-  background: var(--paper-light);
+  background: var(--yellow);
+  color: var(--blue);
   font-weight: 800;
 }
-.banner-selector button:hover {
-  background: #e6e9e0;
+.banner-selector button:not([aria-selected="true"]):hover {
+  background: #0028a0;
 }
 .home-chapter-nav {
   background: var(--paper);
@@ -208,7 +211,7 @@ body {
   background: var(--paper-light);
 }
 .company-identity {
-  background: #dde0d8;
+  background: #ffffff;
 }
 .company-identity > div + div {
   border: 0;
@@ -245,7 +248,8 @@ body {
   display: none;
 }
 .capability-tabs > button[aria-selected="true"] {
-  background: var(--paper-light);
+  background: var(--blue);
+  color: #ffffff;
 }
 .capability-feature {
   background: var(--paper-light);
@@ -309,7 +313,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 25px 35px;
-  background: #dbdfd6;
+  background: #eaf2ff;
   padding: 28px 30px;
   margin-top: 30px;
 }
@@ -350,11 +354,12 @@ body {
 .application-tabs > button {
   border: 0;
   border-radius: 0;
-  background: #dde0d8;
+  background: #ffffff;
   font-size: 12px;
 }
 .application-tabs > button[aria-selected="true"] {
-  background: #ccd3c7;
+  background: #0028a0;
+  color: #ffffff;
   border: 0;
 }
 .application-feature img {
@@ -380,7 +385,7 @@ body {
   display: none;
 }
 .home-quality {
-  background: #dfe3dc;
+  background: #eaf2ff;
   border: 0;
 }
 .quality-caption > svg,
@@ -398,7 +403,8 @@ body {
   font-weight: 650;
 }
 .collaboration-board {
-  background: #d8ddd4;
+  background: #0028a0;
+  color: #ffffff;
   border: 0;
   border-radius: 0;
 }
@@ -419,7 +425,8 @@ body {
   display: none;
 }
 .home-project-process {
-  background: #dce0d7;
+  background: #0028a0;
+  color: #ffffff;
   border: 0;
 }
 .home-process-steps > li {
@@ -428,6 +435,7 @@ body {
 }
 .home-process-number {
   font-size: 24px;
+  color: var(--yellow);
   font-weight: 500;
   margin-bottom: 22px;
 }
@@ -442,10 +450,10 @@ body {
 .home-file-icon {
   border: 0;
   border-radius: 0;
-  background: #dce0d6;
+  background: #eaf2ff;
 }
 .home-company-request {
-  background: #dce0d6;
+  background: #fff3d6;
   border: 0;
   border-radius: 0;
 }
@@ -453,7 +461,7 @@ body {
   display: none;
 }
 .home-faq {
-  background: #dfe2da;
+  background: #eaf2ff;
   border: 0;
 }
 .home-faq-list details,
@@ -463,29 +471,37 @@ body {
 .enquiry-form {
   border: 0;
   border-radius: 0;
-  background: #e0e3db;
+  background: #ffffff;
   box-shadow: none;
 }
 .enquiry-form input:not([type="checkbox"]),
 .enquiry-form select,
 .enquiry-form textarea {
   background: var(--paper-light);
-  border: 1px solid #afb9b3;
+  border: 1px solid #b2c8ea;
   border-radius: 2px;
 }
 .brief-prefill {
-  background: #d2d9cc;
+  background: #eaf2ff;
   border: 0;
   padding: 13px;
   margin-bottom: 20px;
   font-size: 12px;
 }
 .site-footer {
-  background: #d3d8cf;
+  background: #0028a0;
+  color: #ffffff;
   border: 0;
 }
 .footer-bottom {
   border: 0;
+}
+.site-footer .brand {
+  background: #ffffff;
+}
+.footer-bottom button {
+  color: inherit;
+  background: transparent;
 }
 .solution-page:before {
   display: none;
@@ -495,7 +511,7 @@ body {
 .faq-section,
 .spec-section,
 .process-section {
-  background: #dde2d8;
+  background: #eaf2ff;
   border: 0;
 }
 .option-grid article {
@@ -533,7 +549,7 @@ body {
   box-shadow: none;
 }
 .cookie-panel {
-  border: 1px solid #b8c1b4;
+  border: 1px solid #b2c8ea;
   border-radius: 2px;
   background: var(--paper-light);
   box-shadow: 0 3px 14px #001a6610;
@@ -596,7 +612,7 @@ body {
     margin-left: 5px;
   }
   .mobile-nav {
-    background: #f3f4ee;
+    background: #ffffff;
   }
   .banner-stage {
     grid-template-columns: 46% 54%;

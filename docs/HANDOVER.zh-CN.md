@@ -14,7 +14,7 @@
 
 企业首页扩展：`content/company.ts` 管理能力、质量和项目流程；`content/home.ts` 管理应用组合、公司咨询模板和 FAQ。企业实拍位于 `public/images/company/`，逐张来源与哈希见 `content/company-image-provenance.json`。公司介绍页复用企业能力板块。
 
-当前视觉以 `docs/VISUAL-REVISION.zh-CN.md` 为准：浅石色实体背景、无装饰连接线、真实企业图片与大幅 Banner。首屏 `components/home-banner.tsx` 提供四条产品线的手动切换；多产品需求使用 `components/product-brief.tsx` 中的复选框。已撤下模型热点首屏和重复页内导航。全局不再加载旧 `ambience.css`、`atlas.css`，当前外观由 `app/brand-editorial.css` 统一。
+当前视觉以 `docs/VISUAL-REVISION.zh-CN.md` 为准：龙弛蓝 Banner / 流程 / 页脚、亮蓝切换区、黄色行动按钮、浅蓝与白色内容区，已移除灰绿色。无装饰连接线，保留真实企业图片与大幅 Banner。首屏 `components/home-banner.tsx` 提供四条产品线的手动切换；多产品需求使用 `components/product-brief.tsx` 中的复选框。已撤下模型热点首屏和重复页内导航。全局不再加载旧 `ambience.css`、`atlas.css`，当前外观由 `app/brand-editorial.css` 统一。
 
 本地公司资料指向湖南主体；网站国际询盘主体为深圳公司。当前分别标注企业资料来源，不主张已验证的法律/股权关系。不把湖南成立年份、证书或规模转为深圳宣传数字。后续需要添加成立历史、资质墙、案例和工厂规模时，先核实实体、型号、有效期和披露授权，再更新对应内容；不要在公开页面放空白占位或虚构数字。
 
