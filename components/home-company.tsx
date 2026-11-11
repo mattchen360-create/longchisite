@@ -45,17 +45,16 @@ export function CompanyOverview() {
     >
       <div className="company-overview-grid">
         <div className="company-overview-copy">
-          <span className="eyebrow">Meet LONGCHI SMART</span>
+          <span className="eyebrow">About us</span>
           <h2 id="company-title">
-            The people.
+            Get to know
             <br />
-            The process.
-            <br />
-            The project ahead.
+            LONGCHI SMART.
           </h2>
           <p>
-            Good equipment is only part of the story. Get to know the technical
-            work, lighting production and project conversations behind LONGCHI.
+            LONGCHI SMART supports project enquiries for lighting, traffic
+            safety, parking and access control. Get to know the technical work
+            and lighting production behind the company profile.
           </p>
           <p>
             Contact us in Shenzhen to discuss your international project.
@@ -100,22 +99,6 @@ export function CompanyOverview() {
           </div>
         </div>
       </div>
-      <div className="company-discipline-strip">
-        <p>
-          From lighting hardware
-          <br />
-          to smart applications.
-        </p>
-        <span>Technical development</span>
-        <span>Lighting assembly</span>
-        <span>Project coordination</span>
-        <a
-          href="/contact/?topic=company-profile"
-          aria-label="Request LONGCHI company information"
-        >
-          <ArrowUpRight size={25} aria-hidden="true" />
-        </a>
-      </div>
     </section>
   );
 }
@@ -141,21 +124,13 @@ export function HomeQuality() {
               Lighting checks on the production line · Hunan LONGCHI materials
             </figcaption>
           </figure>
-          <div className="quality-caption">
-            <FileCheck2 size={26} strokeWidth={1.4} aria-hidden="true" />
-            <p>
-              Look at the process.
-              <br />
-              <strong>Then check the details.</strong>
-            </p>
-          </div>
         </div>
         <div className="quality-copy">
           <span className="eyebrow">Quality & documentation</span>
           <h2 id="quality-title">
-            Confidence starts
+            Quality checks
             <br />
-            with what you can review.
+            and documentation.
           </h2>
           <p>
             See lighting checks in the manufacturing profile. For your own
@@ -194,9 +169,9 @@ export function HomeCollaboration() {
         <div>
           <span className="eyebrow">International project conversations</span>
           <h2 id="collaboration-title">
-            Based in Shenzhen.
+            International
             <br />
-            Focused on your site.
+            project support.
           </h2>
         </div>
         <p>
@@ -281,9 +256,9 @@ export function HomeProcess() {
           <div>
             <span className="eyebrow">Working with LONGCHI</span>
             <h2 id="process-title">
-              A clear path.
+              From project brief
               <br />
-              From brief to handover.
+              to handover.
             </h2>
           </div>
           <a href="/contact/" className="text-link">

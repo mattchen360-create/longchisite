@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { solutions } from "@/content/site";
 import { solutionVisuals } from "@/content/visuals";
+import { ProductBrief } from "@/components/product-brief";
 export function HomeSolutions() {
   return (
     <section id="solutions" className="section container v2-solution-section">
@@ -8,9 +9,9 @@ export function HomeSolutions() {
         <div>
           <span className="eyebrow">Four product lines</span>
           <h2>
-            The right equipment.
+            Explore our
             <br />
-            For the way your site works.
+            product range.
           </h2>
         </div>
         <p>
@@ -68,6 +69,7 @@ export function HomeSolutions() {
         Application scenes are illustrative. Equipment and configuration are
         confirmed for your project.
       </p>
+      <ProductBrief />
     </section>
   );
 }

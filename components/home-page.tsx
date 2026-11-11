@@ -1,10 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 import { site, solutions } from "@/content/site";
 import { EnquiryForm } from "@/components/enquiry-form";
-import { HomeHero } from "@/components/solution-atlas";
+import { HomeBanner } from "@/components/home-banner";
 import { HomeSolutions } from "@/components/home-solutions";
 import {
-  HomeChapterNav,
   CompanyOverview,
   HomeQuality,
   HomeCollaboration,
@@ -16,8 +15,7 @@ import { HomeResources, HomeFAQ } from "@/components/home-resources";
 export function HomePage() {
   return (
     <main id="main-content">
-      <HomeHero />
-      <HomeChapterNav />
+      <HomeBanner />
       <CompanyOverview />
       <HomeCapabilities />
       <HomeSolutions />

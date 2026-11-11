@@ -15,9 +15,9 @@ export function HomeResources() {
         <div>
           <span className="eyebrow">Open the details</span>
           <h2 id="resources-title">
-            Useful information.
+            Technical documents
             <br />
-            Before the next conversation.
+            for your review.
           </h2>
         </div>
         <a href="/resources/" className="text-link">
@@ -74,9 +74,9 @@ export function HomeFAQ() {
         <div>
           <span className="eyebrow">Before we get started</span>
           <h2 id="questions-title">
-            Good questions.
+            Questions about
             <br />
-            Clear next steps.
+            working with us.
           </h2>
           <p>
             Looking into the company, the equipment or the way we work? Start

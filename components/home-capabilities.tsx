@@ -28,9 +28,9 @@ export function HomeCapabilities() {
           <div>
             <span className="eyebrow">Inside LONGCHI</span>
             <h2 id="capabilities-title">
-              Practical expertise.
+              Development and
               <br />
-              Visible in the work.
+              manufacturing.
             </h2>
           </div>
           <p>

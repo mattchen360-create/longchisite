@@ -1,0 +1,797 @@
+/* A quiet industrial identity: solid mineral surfaces, photography and typography. */
+:root {
+  --paper: #e8e8e2;
+  --paper-light: #f3f3ee;
+  --paper-deep: #dbdfd9;
+}
+body {
+  background: var(--paper);
+  background-image: none;
+}
+.site-header {
+  background: #f9faf7;
+  border: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.site-header .brand {
+  background: #fff;
+  border-radius: 0;
+}
+.site-header .brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.desktop-nav > a[aria-current="page"] {
+  font-weight: 800;
+}
+.mobile-home-link {
+  display: none;
+}
+.eyebrow {
+  gap: 0;
+  font-weight: 600;
+}
+.eyebrow:before,
+.option-mark,
+.company-line-symbol,
+.company-discipline-strip > span:before,
+.collaboration-destinations:before,
+.collaboration-destinations > div:before,
+.home-process-steps > li:before {
+  display: none;
+}
+.button {
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  gap: 14px;
+}
+.button:hover {
+  box-shadow: none;
+}
+.header-cta > svg,
+.text-link > svg:not(.lucide-download) {
+  display: none;
+}
+.text-link {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+.text-link:hover {
+  text-decoration-thickness: 2px;
+}
+.nav-dropdown {
+  border: 0;
+  border-radius: 0;
+  background: #f9faf7;
+  box-shadow: 0 9px 18px #001a6610;
+}
+
+.home-banner {
+  background: #dddfd9;
+}
+.banner-stage {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 620px;
+}
+.banner-copy {
+  align-self: center;
+  padding: 55px 46px 60px max(56px, calc((100vw - 1320px) / 2));
+}
+.banner-category {
+  font-size: 12px;
+  font-weight: 650;
+  margin-bottom: 26px;
+}
+.banner-copy h1 {
+  font-size: clamp(48px, 4.4vw, 70px);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -2.8px;
+  text-align: left;
+  text-wrap: initial;
+}
+.banner-description {
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 390px;
+  margin-top: 27px;
+  min-height: 58px;
+}
+.banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 32px;
+}
+.banner-actions .button {
+  min-height: 50px;
+  font-size: 13px;
+  padding-inline: 22px;
+}
+.banner-company-link {
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.banner-image {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  min-height: 620px;
+}
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.banner-image figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  background: #f3f3eefa;
+  color: var(--blue);
+  padding: 5px 9px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.banner-selector {
+  background: #d2d7cf;
+}
+.banner-selector > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 76px;
+}
+.banner-selector > div > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.banner-selector [role="tablist"] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  width: 76%;
+}
+.banner-selector button {
+  background: transparent;
+  border: 0;
+  padding: 13px 20px;
+  min-height: 48px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.banner-selector button[aria-selected="true"] {
+  background: var(--paper-light);
+  font-weight: 800;
+}
+.banner-selector button:hover {
+  background: #e6e9e0;
+}
+.home-chapter-nav {
+  background: var(--paper);
+  border: 0;
+}
+.home-chapter-nav > div {
+  min-height: 70px;
+}
+.home-chapter h2 {
+  letter-spacing: -1.5px;
+  font-weight: 600;
+}
+.home-chapter > .container,
+.home-chapter.container {
+  isolation: isolate;
+}
+.company-overview-copy h2 {
+  font-size: clamp(38px, 3.6vw, 52px);
+}
+.company-exterior,
+.company-identity,
+.quality-visual > figure {
+  border: 0;
+  border-radius: 0;
+}
+.company-exterior figcaption,
+.quality-visual figcaption {
+  background: var(--paper-light);
+}
+.company-identity {
+  background: #dde0d8;
+}
+.company-identity > div + div {
+  border: 0;
+}
+.company-identity > div > svg {
+  display: none;
+}
+.company-discipline-strip {
+  border: 0;
+  padding-top: 20px;
+}
+.company-discipline-strip > a {
+  background: none;
+  border-radius: 0;
+}
+.company-discipline-strip > span {
+  gap: 0;
+}
+.home-capabilities {
+  background: var(--paper-deep);
+  border: 0;
+}
+.capability-tabs {
+  border: 0;
+  gap: 8px;
+}
+.capability-tabs > button {
+  border: 0;
+  padding: 13px 18px;
+  background: transparent;
+  font-size: 13px;
+}
+.capability-tabs > button > svg {
+  display: none;
+}
+.capability-tabs > button[aria-selected="true"] {
+  background: var(--paper-light);
+}
+.capability-feature {
+  background: var(--paper-light);
+  border: 0;
+  border-radius: 0;
+}
+.capability-feature > figure {
+  background: var(--paper-light);
+}
+.capability-feature figcaption {
+  background: var(--paper-light);
+}
+.capability-copy h3 {
+  font-weight: 600;
+}
+.capability-copy li > svg {
+  display: none;
+}
+.capability-copy,
+.application-copy {
+  animation: none;
+}
+.v2-solution-tile {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.v2-tile-image {
+  border-radius: 0;
+}
+.v2-tile-image img,
+.v2-solution-tile:hover .v2-tile-image img {
+  transform: none;
+}
+.v2-tile-tag,
+.v2-tile-arrow {
+  display: none;
+}
+.v2-tile-body {
+  padding: 24px 0 28px;
+  border: 0;
+}
+.v2-tile-body h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.v2-tile-body p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.v2-tile-product {
+  border: 0;
+  border-radius: 0;
+}
+.v2-solution-grid {
+  gap: 32px 38px;
+}
+.product-brief {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px 35px;
+  background: #dbdfd6;
+  padding: 28px 30px;
+  margin-top: 30px;
+}
+.product-brief h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.product-brief p {
+  font-size: 12px;
+}
+.product-brief fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.product-brief label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  min-height: 36px;
+}
+.product-brief input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--blue);
+}
+.product-brief > .button {
+  margin-left: auto;
+  font-size: 12px;
+  min-height: 46px;
+}
+.application-tabs > button {
+  border: 0;
+  border-radius: 0;
+  background: #dde0d8;
+  font-size: 12px;
+}
+.application-tabs > button[aria-selected="true"] {
+  background: #ccd3c7;
+  border: 0;
+}
+.application-feature img {
+  border-radius: 0;
+}
+.application-feature figcaption {
+  background: var(--paper-light);
+  border-radius: 0;
+}
+.application-lines {
+  gap: 14px;
+}
+.application-lines > a {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.application-lines > a > svg,
+.application-copy li > svg {
+  display: none;
+}
+.home-quality {
+  background: #dfe3dc;
+  border: 0;
+}
+.quality-caption > svg,
+.quality-review-list article > svg {
+  display: none;
+}
+.quality-caption {
+  padding-left: 0;
+}
+.quality-review-list article {
+  border: 0;
+  padding: 12px 0;
+}
+.quality-review-list h3 {
+  font-weight: 650;
+}
+.collaboration-board {
+  background: #d8ddd4;
+  border: 0;
+  border-radius: 0;
+}
+.collaboration-origin > svg {
+  display: none;
+}
+.collaboration-origin h3 {
+  font-weight: 600;
+}
+.collaboration-destinations {
+  padding-left: 0;
+}
+.collaboration-destinations > div {
+  border: 0;
+  padding-block: 15px;
+}
+.collaboration-services article > svg {
+  display: none;
+}
+.home-project-process {
+  background: #dce0d7;
+  border: 0;
+}
+.home-process-steps > li {
+  border: 0;
+  padding-top: 8px;
+}
+.home-process-number {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.home-process-steps strong {
+  font-weight: 600;
+}
+.home-document-list article,
+.home-document-list article:last-child {
+  border: 0;
+  padding-block: 20px;
+}
+.home-file-icon {
+  border: 0;
+  border-radius: 0;
+  background: #dce0d6;
+}
+.home-company-request {
+  background: #dce0d6;
+  border: 0;
+  border-radius: 0;
+}
+.home-company-request > svg {
+  display: none;
+}
+.home-faq {
+  background: #dfe2da;
+  border: 0;
+}
+.home-faq-list details,
+.home-faq-list details:last-child {
+  border: 0;
+}
+.enquiry-form {
+  border: 0;
+  border-radius: 0;
+  background: #e0e3db;
+  box-shadow: none;
+}
+.enquiry-form input:not([type="checkbox"]),
+.enquiry-form select,
+.enquiry-form textarea {
+  background: var(--paper-light);
+  border: 1px solid #afb9b3;
+  border-radius: 2px;
+}
+.brief-prefill {
+  background: #d2d9cc;
+  border: 0;
+  padding: 13px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.site-footer {
+  background: #d3d8cf;
+  border: 0;
+}
+.footer-bottom {
+  border: 0;
+}
+.solution-page:before {
+  display: none;
+}
+.application-strip,
+.catalog-section,
+.faq-section,
+.spec-section,
+.process-section {
+  background: #dde2d8;
+  border: 0;
+}
+.option-grid article {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.v2-landing-product {
+  border: 0;
+  border-radius: 0;
+  background: var(--paper-light);
+  box-shadow: none;
+}
+.solution-hero-image > img,
+.product-card,
+.product-card:hover,
+.product-hero-image,
+.resource-item {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+.product-card-copy {
+  background: var(--paper-light);
+}
+.faq-grid details {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.mobile-sticky-cta {
+  background: var(--paper-light);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.cookie-panel {
+  border: 1px solid #b8c1b4;
+  border-radius: 2px;
+  background: var(--paper-light);
+  box-shadow: 0 3px 14px #001a6610;
+}
+@media (min-width: 1800px) {
+  .banner-copy {
+    padding-left: max(70px, calc((100vw - 1550px) / 2));
+  }
+  .banner-stage,
+  .banner-image {
+    min-height: 690px;
+  }
+}
+@media (max-width: 1150px) {
+  .banner-stage {
+    grid-template-columns: 45% 55%;
+  }
+  .banner-copy {
+    padding-left: 45px;
+    padding-right: 30px;
+  }
+  .banner-copy h1 {
+    font-size: 53px;
+    letter-spacing: -2px;
+  }
+  .banner-stage,
+  .banner-image {
+    min-height: 570px;
+  }
+  .banner-description {
+    font-size: 14px;
+  }
+  .banner-actions {
+    gap: 23px;
+  }
+  .banner-selector > div > span {
+    display: none;
+  }
+  .banner-selector [role="tablist"] {
+    width: 100%;
+  }
+  .product-brief > div {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .mobile-home-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    font-size: 12px;
+    font-weight: 650;
+    margin-left: auto;
+  }
+  .header-inner {
+    gap: 14px;
+  }
+  .header-cta {
+    margin-left: 5px;
+  }
+  .mobile-nav {
+    background: #f3f4ee;
+  }
+  .banner-stage {
+    grid-template-columns: 46% 54%;
+  }
+  .banner-copy {
+    padding: 40px 25px 42px 32px;
+  }
+  .banner-copy h1 {
+    font-size: 43px;
+    letter-spacing: -1.7px;
+  }
+  .banner-stage,
+  .banner-image {
+    min-height: 530px;
+  }
+  .banner-description {
+    font-size: 12px;
+    margin-top: 23px;
+  }
+  .banner-category {
+    font-size: 10px;
+    margin-bottom: 24px;
+  }
+  .banner-actions {
+    gap: 18px;
+    margin-top: 27px;
+  }
+  .banner-actions .button,
+  .banner-company-link {
+    font-size: 11px;
+  }
+  .banner-actions .button {
+    padding-inline: 16px;
+  }
+  .banner-selector button {
+    font-size: 12px;
+    padding-inline: 8px;
+  }
+  .v2-tile-body h3 {
+    font-size: 24px;
+  }
+  .v2-tile-body p {
+    font-size: 12px;
+  }
+  .capability-tabs > button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .header-inner {
+    gap: 9px;
+  }
+  .brand,
+  .brand img {
+    width: 123px;
+  }
+  .site-header .brand {
+    height: 58px;
+  }
+  .header-cta {
+    padding: 10px 11px;
+    min-height: 38px;
+    font-size: 9px;
+    margin-left: 2px;
+  }
+  .mobile-home-link {
+    font-size: 11px;
+    min-width: 34px;
+  }
+  .mobile-menu-toggle {
+    padding-left: 2px;
+    background: transparent;
+  }
+  .mobile-menu-toggle svg {
+    width: 19px;
+  }
+  .banner-stage {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .banner-image {
+    order: -1;
+    width: 100%;
+    min-height: 0;
+    height: 245px;
+  }
+  .banner-image figcaption {
+    font-size: 8px;
+    bottom: 10px;
+    right: 10px;
+    padding: 4px 7px;
+  }
+  .banner-copy {
+    align-self: stretch;
+    padding: 28px 23px 32px;
+  }
+  .banner-category {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+  .banner-copy h1 {
+    font-size: 44px;
+    letter-spacing: -1.7px;
+    line-height: 1.06;
+  }
+  .banner-description {
+    font-size: 13px;
+    margin-top: 21px;
+    min-height: 0;
+    max-width: 330px;
+  }
+  .banner-actions {
+    gap: 27px;
+    margin-top: 23px;
+  }
+  .banner-actions .button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .banner-company-link {
+    font-size: 11px;
+  }
+  .banner-selector > div {
+    padding-block: 8px;
+  }
+  .banner-selector [role="tablist"] {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  .banner-selector button {
+    min-height: 42px;
+    padding: 9px;
+    font-size: 11px;
+  }
+  .company-overview-copy h2 {
+    font-size: 37px;
+  }
+  .company-identity > div {
+    padding: 18px 14px;
+  }
+  .capability-tabs {
+    gap: 4px;
+  }
+  .capability-tabs > button {
+    padding: 10px 9px;
+    font-size: 10px;
+    min-height: 54px;
+    align-items: center;
+  }
+  .v2-solution-grid {
+    gap: 16px;
+  }
+  .v2-tile-body {
+    padding-block: 18px 22px;
+  }
+  .v2-tile-body h3 {
+    font-size: 22px;
+  }
+  .v2-tile-body p {
+    font-size: 12px;
+  }
+  .product-brief {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .product-brief h3 {
+    font-size: 19px;
+  }
+  .product-brief fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 9px 20px;
+  }
+  .product-brief > .button {
+    margin-left: 0;
+    min-height: 44px;
+  }
+  .home-process-number {
+    font-size: 21px;
+  }
+}
+@media (max-width: 370px) {
+  .brand,
+  .brand img {
+    width: 111px;
+  }
+  .header-inner {
+    gap: 7px;
+  }
+  .header-cta {
+    padding-inline: 9px;
+  }
+  .banner-copy h1 {
+    font-size: 41px;
+  }
+}
