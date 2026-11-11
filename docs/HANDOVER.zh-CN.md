@@ -12,6 +12,12 @@
 
 公司与产品文案：`content/site.ts`。图片：`public/images/`。来源记录：`content/asset-provenance.json`。规格下载：`public/downloads/`。
 
+企业首页扩展：`content/company.ts` 管理能力、质量和项目流程；`content/home.ts` 管理应用组合、公司咨询模板和 FAQ。企业实拍位于 `public/images/company/`，逐张来源与哈希见 `content/company-image-provenance.json`。公司介绍页复用企业能力板块。页内导览按公司、能力、方案、质量、资料和询盘组织。
+
+本地公司资料指向湖南主体；网站国际询盘主体为深圳公司。当前分别标注企业资料来源，不主张已验证的法律/股权关系。不把湖南成立年份、证书或规模转为深圳宣传数字。后续需要添加成立历史、资质墙、案例和工厂规模时，先核实实体、型号、有效期和披露授权，再更新对应内容；不要在公开页面放空白占位或虚构数字。
+
+公司资料咨询入口：`/contact/?topic=company-profile`。会预选独立的 `company-enquiry` 分类并使用公司咨询文案，不强迫访客选择产品。应用场景的 `application` 与资料请求 `topic` 使用允许列表生成可编辑的预填需求。数据库不需新增迁移。
+
 产品资料后续慢慢补充即可。新增型号时填写 Product 数据；不要将系列参数当成每个型号固定参数。停车与门禁当前以类目需求页面展示，补齐单品资料后再增加具体型号。
 
 ## 本地运行

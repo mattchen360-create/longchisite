@@ -1,0 +1,95 @@
+{
+  "checked_date": "2026-11-11",
+  "source_context": "Supplied LONGCHI company photo materials; sources are photographs rather than generated reconstructions. Do not automatically assign them to Shenzhen legal entity.",
+  "assets": [
+    {
+      "key": "facility",
+      "source_absolute_path": "E:\\龙弛文件夹\\02 龙弛资料库\\01 公司资料\\04 工厂照片\\公司整体图（大门).jpg",
+      "output_relative_path": "public/images/company/facility.webp",
+      "original_dimensions": [
+        4000,
+        1800
+      ],
+      "output_dimensions": [
+        1600,
+        720
+      ],
+      "source_bytes": 3201288,
+      "output_bytes": 277118,
+      "source_sha256": "e92e52b2685cd072d75fa6f6a3fe3e1b98d39f99fd77cc99b0b1329691fe69ad",
+      "output_sha256": "1674c2143ee5953e0b338f3825be7ff4cd895919aec4f0b8ec9d49148d13e8bc",
+      "visible_facts": "Factory exterior supplied in Hunan LONGCHI manufacturing materials; visible Chinese signage, blue-roof factory and lamp-pole materials. Original phone/date watermark retained.",
+      "suggested_caption": "Manufacturing facility exterior",
+      "limitations": "Do not call this Shenzhen headquarters; no floor area or ownership inferred.",
+      "visually_inspected": true,
+      "processing": "Whole-image technical resizing to max1600 and WebP q85; no crop, regeneration, recoloring, removing text/watermarks or retouching"
+    },
+    {
+      "key": "engineering",
+      "source_absolute_path": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\图片素材\\图片\\研发类\\002c35e05a9e015864e79962507bce77.jpg",
+      "output_relative_path": "public/images/company/engineering.webp",
+      "original_dimensions": [
+        1920,
+        1080
+      ],
+      "output_dimensions": [
+        1600,
+        900
+      ],
+      "source_bytes": 219132,
+      "output_bytes": 157866,
+      "source_sha256": "a5c72f5d81c9fe8342883be5dec6b9d9c4d816eb0e65e0719e6722c2001c5898",
+      "output_sha256": "201db907102db2bd226dda8d756ec2ab12ed0287d64383b6f6dc111988977bbd",
+      "visible_facts": "People working around computers with an electrical test meter, hardware and lighting components visible. Supplied under R&D category; exact roles and task not established.",
+      "suggested_caption": "Technical workspace",
+      "limitations": "Do not infer staff count, specialist titles, certifications, customer identities or exact software capability.",
+      "visually_inspected": true,
+      "processing": "Whole-image technical resizing to max1600 and WebP q85; no crop, regeneration, recoloring, removing text/watermarks or retouching"
+    },
+    {
+      "key": "testing",
+      "source_absolute_path": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\图片素材\\图片\\品控类\\2ae1a233ce48accb3aa1a53a0a475f10.jpg",
+      "output_relative_path": "public/images/company/testing.webp",
+      "original_dimensions": [
+        1440,
+        1080
+      ],
+      "output_dimensions": [
+        1440,
+        1080
+      ],
+      "source_bytes": 73224,
+      "output_bytes": 66034,
+      "source_sha256": "4a0390cbbf6350cf1ac19d58becbe68b80d3330ac4f77e925dfaced51ca8d0cb",
+      "output_sha256": "dbe21d20e537ff9a45ef4243567545d44068ad069255faa15030f186945fc770",
+      "visible_facts": "Rows of LED street-light fixtures are connected and illuminated on production benches.",
+      "suggested_caption": "Lighting checks on the production line",
+      "limitations": "Do not label as EMC, salt-spray, thermal chamber or a certified independent laboratory. No test duration or standard established.",
+      "visually_inspected": true,
+      "processing": "Whole-image technical resizing to max1600 and WebP q85; no crop, regeneration, recoloring, removing text/watermarks or retouching"
+    },
+    {
+      "key": "team",
+      "source_absolute_path": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\图片素材\\图片\\研发类\\a8168275d709999c07202195dd288141.jpg",
+      "output_relative_path": "public/images/company/team.webp",
+      "original_dimensions": [
+        1920,
+        1080
+      ],
+      "output_dimensions": [
+        1600,
+        900
+      ],
+      "source_bytes": 219104,
+      "output_bytes": 158234,
+      "source_sha256": "080da7889e5f6d312c56f94110bb5bb1557935012ad34c52f18a5b2495d6410e",
+      "output_sha256": "dd06c96fd35f240414b426e46462982772cac064e4b59beac1fdfcd0b712bb68",
+      "visible_facts": "Wider office/technical workroom photograph with several people, desks, computers and product components.",
+      "suggested_caption": "A view of the technical workspace",
+      "limitations": "Not an exhibition image. Roles/employment of individual people are not independently verified; no headcount or qualifications claimed.",
+      "visually_inspected": true,
+      "processing": "Whole-image technical resizing to max1600 and WebP q85; no crop, regeneration, recoloring, removing text/watermarks or retouching"
+    }
+  ],
+  "total_output_bytes": 659252
+}

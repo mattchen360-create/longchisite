@@ -8,6 +8,7 @@ import "./site.css";
 import "./redesign.css";
 import "./ambience.css";
 import "./atlas.css";
+import "./home-sections.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),

@@ -9,12 +9,14 @@ export function EnquiryForm({
   compact = false,
   initialMessage = "",
   selectedLines = [],
+  purpose = "project",
 }: {
   category?: string;
   model?: string;
   compact?: boolean;
   initialMessage?: string;
   selectedLines?: string[];
+  purpose?: "project" | "company";
 }) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
@@ -110,13 +112,23 @@ export function EnquiryForm({
         >
           <div className="form-heading">
             <span className="eyebrow">Your project starts here</span>
-            <h3>Get your project quote.</h3>
+            <h3>
+              {purpose === "company"
+                ? "Get to know LONGCHI."
+                : "Get your project quote."}
+            </h3>
             <p>
-              Tell us the product line and project location. We’ll help with
-              equipment and configuration.
+              {purpose === "company"
+                ? "Tell us what your team would like to review. We’ll help with company information and your questions."
+                : "Tell us the product line and project location. We’ll help with equipment and configuration."}
             </p>
           </div>
-          {selectedLines.length > 0 && <p className="brief-prefill">Your selected lines: <strong>{selectedLines.join(", ")}</strong>. Add your site details below.</p>}
+          {selectedLines.length > 0 && (
+            <p className="brief-prefill">
+              Your selected lines: <strong>{selectedLines.join(", ")}</strong>.
+              Add your site details below.
+            </p>
+          )}
           <div className="form-grid">
             <label>
               Name
@@ -141,7 +153,7 @@ export function EnquiryForm({
           </div>
           <div className="form-grid">
             <label>
-              Product line <span aria-label="required">*</span>
+              Enquiry area <span aria-label="required">*</span>
               <select
                 name="category"
                 required
@@ -157,10 +169,14 @@ export function EnquiryForm({
                   </option>
                 ))}
                 <option value="multiple">Multiple product lines</option>
+                <option value="company-enquiry">
+                  Company / partnership enquiry
+                </option>
               </select>
             </label>
             <label>
-              Project country <span aria-label="required">*</span>
+              {purpose === "company" ? "Your country" : "Project country"}{" "}
+              <span aria-label="required">*</span>
               <input
                 name="country"
                 autoComplete="country-name"
@@ -171,7 +187,7 @@ export function EnquiryForm({
             </label>
           </div>
           <label>
-            Project details
+            {purpose === "company" ? "Your questions" : "Project details"}
             <textarea
               name="message"
               rows={3}
@@ -220,13 +236,15 @@ export function EnquiryForm({
               </>
             ) : (
               <>
-                Request a project quote{" "}
+                {purpose === "company"
+                  ? "Send company enquiry"
+                  : "Request a project quote"}{" "}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </>
             )}
           </button>
           <p className="form-note">
-            Your details are used to respond to your project enquiry.
+            Your details are used to respond to your enquiry.
           </p>
         </form>
       )}

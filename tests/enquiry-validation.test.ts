@@ -26,6 +26,15 @@ test("unconsented click identifiers are stripped on the server", () => {
   });
   assert.deepEqual(result.attribution, {});
 });
+test("company enquiries can be saved without forcing a product line", () => {
+  const result = validateEnquiry({
+    ...valid,
+    category: "company-enquiry",
+    message: "Request company profile and manufacturing information",
+  });
+  assert.equal(result.category, "company-enquiry");
+  assert.deepEqual(result.attribution, {});
+});
 test("consented campaign fields are retained while unrelated fields are excluded", () => {
   const result = validateEnquiry({
     ...valid,

@@ -4,6 +4,7 @@ const categories = new Set([
   "smart-parking",
   "access-control",
   "multiple",
+  "company-enquiry",
 ]);
 export type ValidatedEnquiry = {
   name: string;
