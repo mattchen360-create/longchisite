@@ -9,3 +9,7 @@ Composition: a direct product-focused headline beside a large architectural scen
 Illustrative scenes are AI-generated with built-in imagegen and labelled as application illustrations. They are not completed LONGCHI installations or proof of exact model appearance. Original product photographs and specifications remain the model source. Prompt/provenance files are in content/redesign-image-provenance-*.json.
 
 Existing enquiry persistence, consent controls, attribution, private lead management and stable routes remain functional. Desktop and mobile screenshots must be inspected before publication. The same private Site identity is retained.
+
+## User direction for the background and Home navigation
+
+The user explicitly rejected a pure-white background and requested effects similar to Lovable. This overrides the previous white-canvas preference for this website. Use blue/lavender ambient gradients, warm yellow illumination, translucent header and card surfaces, restrained grid texture and responsive hover effects while retaining LONGCHI blue text and yellow actions. Add explicit Home links to desktop navigation, the mobile header, the mobile menu and footer, including campaign landing pages. The original white-backed logo remains on its own white surface.

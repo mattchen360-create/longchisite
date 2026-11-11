@@ -23,6 +23,9 @@ export function SiteHeader() {
             />
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
+            <a href="/" aria-current={path === "/" ? "page" : undefined}>
+              Home
+            </a>
             {campaign ? (
               <a href="#explore">Explore solutions</a>
             ) : (
@@ -45,6 +48,14 @@ export function SiteHeader() {
               </>
             )}
           </nav>
+          <a
+            className="mobile-home-link"
+            href="/"
+            aria-label="Home"
+            aria-current={path === "/" ? "page" : undefined}
+          >
+            Home
+          </a>
           <a
             className="button button-small header-cta"
             href={campaign ? "#enquire" : "/contact/"}
@@ -69,6 +80,13 @@ export function SiteHeader() {
             className="mobile-nav"
             aria-label="Mobile navigation"
           >
+            <a
+              href="/"
+              aria-current={path === "/" ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              Home
+            </a>
             {solutions.map((s) => (
               <a
                 key={s.slug}

@@ -6,6 +6,7 @@ import { ConsentManager } from "@/components/consent-manager";
 import { site } from "@/content/site";
 import "./site.css";
 import "./redesign.css";
+import "./ambience.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),

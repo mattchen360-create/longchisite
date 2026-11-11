@@ -34,6 +34,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h2>Explore</h2>
+          <a href="/">Home</a>
           <a href="/products/">Products</a>
           <a href="/about/">About LONGCHI</a>
           <a href="/resources/">Technical resources</a>
