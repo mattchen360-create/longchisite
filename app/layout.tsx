@@ -13,6 +13,7 @@ import "./interactive-modules.css";
 import "./premium.css";
 import "./contact-refinement.css";
 import "./company-home.css";
+import "./home-carousel.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),

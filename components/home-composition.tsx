@@ -2,7 +2,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, Copy, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import { CorporateHero } from "@/components/corporate-hero";
-import { homeModules, heroOptions } from "@/content/home-modules";
+import { homeModules, bannerSlides } from "@/content/home-modules";
 const storageKey = "longchi-home-selection-v1";
 export function HomeComposition({
   sections,
@@ -29,7 +29,7 @@ export function HomeComposition({
               )
             : [],
         );
-        setBanner([0, 1, 2].includes(saved.banner) ? saved.banner : 0);
+        setBanner([0, 1, 2, 3].includes(saved.banner) ? saved.banner : 0);
       }
     } catch {}
     setLoaded(true);
@@ -61,7 +61,7 @@ export function HomeComposition({
         .filter((m) => hidden.includes(m.id) === hide)
         .map((m) => m.label)
         .join("、") || "无";
-    const text = `龙驰首页筛选结果\nBanner：${heroOptions[banner]}\n保留：${list(false)}\n删除：${list(true)}`;
+    const text = `龙驰首页筛选结果\nBanner：4 张可切换轮播，当前预览 ${bannerSlides[banner].reviewLabel}\n保留：${list(false)}\n删除：${list(true)}`;
     setExportText(text);
     try {
       await navigator.clipboard.writeText(text);
@@ -117,9 +117,9 @@ export function HomeComposition({
             选择只保存在本浏览器。勾选保留，不勾选隐藏；完成后复制结果发回对话。
           </p>
           <fieldset>
-            <legend>Banner 方向</legend>
-            {heroOptions.map((name, i) => (
-              <label key={name}>
+            <legend>轮播首屏预览</legend>
+            {bannerSlides.map((slide, i) => (
+              <label key={slide.label}>
                 <input
                   type="radio"
                   name="home-banner"
@@ -129,7 +129,7 @@ export function HomeComposition({
                     setCopied(false);
                   }}
                 />
-                {name}
+                {slide.reviewLabel}
               </label>
             ))}
           </fieldset>
@@ -191,7 +191,15 @@ export function HomeComposition({
         </aside>
       )}
       {[
-        { id: "banner", node: <CorporateHero variant={review ? banner : 0} /> },
+        {
+          id: "banner",
+          node: (
+            <CorporateHero
+              activeSlide={review ? banner : undefined}
+              onSlideChange={review ? setBanner : undefined}
+            />
+          ),
+        },
         ...sections,
       ].map(({ id, node }) => (
         <div

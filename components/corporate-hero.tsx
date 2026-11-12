@@ -1,129 +1,134 @@
 "use client";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { solutions } from "@/content/site";
-export function CorporateHero({ variant = 0 }: { variant?: number }) {
+import { useRef, useState, type KeyboardEvent } from "react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { bannerSlides } from "@/content/banner";
+
+export function CorporateHero({
+  activeSlide,
+  onSlideChange,
+}: { activeSlide?: number; onSlideChange?: (index: number) => void } = {}) {
+  const [internal, setInternal] = useState(0);
+  const start = useRef<{ x: number; y: number } | null>(null);
+  const active = activeSlide ?? internal,
+    slide = bannerSlides[active];
+  function select(index: number) {
+    const next = (index + bannerSlides.length) % bannerSlides.length;
+    setInternal(next);
+    onSlideChange?.(next);
+  }
+  function keys(e: KeyboardEvent<HTMLButtonElement>, i: number) {
+    let n: number;
+    if (e.key === "ArrowRight") n = (i + 1) % 4;
+    else if (e.key === "ArrowLeft") n = (i + 3) % 4;
+    else if (e.key === "Home") n = 0;
+    else if (e.key === "End") n = 3;
+    else return;
+    e.preventDefault();
+    select(n);
+    document.getElementById(`home-banner-tab-${n}`)?.focus();
+  }
   return (
     <section
-      className={`corporate-hero corporate-hero-${variant}`}
-      aria-label="Meet LONGCHI SMART"
+      className="home-carousel"
+      aria-label="LONGCHI highlights"
+      aria-roledescription="carousel"
     >
-      {variant === 0 ? (
-        <div className="corporate-hero-brand">
-          <div className="corporate-hero-copy">
-            <p>LONGCHI SMART</p>
-            <h1>
-              Meet LONGCHI.
-              <br />
-              Build with us.
-            </h1>
-            <div className="corporate-hero-description">
-              Lighting, traffic, parking and access.
-              <br />
-              Meet the people and the work behind your next project.
-            </div>
-            <div className="corporate-hero-actions">
-              <a className="button" href="#company">
-                Discover LONGCHI
-                <ArrowUpRight size={18} />
-              </a>
-              <a href="/contact/">Talk to our team</a>
-            </div>
-          </div>
-          <figure className="corporate-hero-main-photo">
-            <img
-              src="/images/factory-assembly.webp"
-              alt="Lighting assembly from Hunan LONGCHI company photography"
-              width="1600"
-              height="1000"
-              fetchPriority="high"
-            />
-            <figcaption>Hunan LONGCHI · Lighting assembly</figcaption>
-          </figure>
-          <figure className="corporate-hero-inset">
-            <img
-              src="/images/company/engineering.webp"
-              alt="Technical workspace with people and lighting components"
-              width="1600"
-              height="900"
-            />
-            <figcaption>A closer look at the technical work</figcaption>
-          </figure>
-        </div>
-      ) : variant === 1 ? (
-        <div className="corporate-hero-immersive">
-          <img
-            src="/images/factory-line.webp"
-            alt="Supplied photograph of the lighting manufacturing line"
-            width="1600"
-            height="1000"
-            fetchPriority="high"
-          />
-          <div className="container">
-            <p>Inside LONGCHI</p>
-            <h1>
-              See the work.
-              <br />
-              Meet the company.
-            </h1>
-            <p>
-              Technical conversations. Lighting production.
-              <br />A clearer start to your project.
-            </p>
-            <a className="button" href="#factory">
-              Explore the manufacturing story
-              <ArrowUpRight size={18} />
+      <div
+        className="home-carousel-stage"
+        id="home-banner-panel"
+        role="tabpanel"
+        aria-labelledby={`home-banner-tab-${active}`}
+        aria-live="polite"
+        onTouchStart={(e) => {
+          const t = e.touches[0];
+          start.current = { x: t.clientX, y: t.clientY };
+        }}
+        onTouchEnd={(e) => {
+          const t = e.changedTouches[0],
+            s = start.current;
+          start.current = null;
+          if (s) {
+            const x = t.clientX - s.x,
+              y = t.clientY - s.y;
+            if (Math.abs(x) > 55 && Math.abs(x) > Math.abs(y) * 1.4)
+              select(active + (x < 0 ? 1 : -1));
+          }
+        }}
+      >
+        <img
+          key={slide.image}
+          className="home-carousel-image"
+          src={slide.image}
+          alt={slide.alt}
+          width="1914"
+          height="1000"
+          fetchPriority="high"
+        />
+        <div className="home-carousel-shade" aria-hidden="true" />
+        <div className="container home-carousel-copy">
+          <p>{slide.label}</p>
+          <h1>
+            {slide.title[0]}
+            <br />
+            {slide.title[1]}
+          </h1>
+          <p className="home-carousel-description">{slide.description}</p>
+          <div className="home-carousel-actions">
+            <a href={slide.href} className="button">
+              {slide.action}
+              <ArrowUpRight size={18} aria-hidden="true" />
             </a>
+            <a href="/contact/">Talk to our team</a>
           </div>
-          <span>Hunan LONGCHI manufacturing photography</span>
         </div>
-      ) : (
-        <div className="corporate-hero-disciplines">
-          <div className="container">
-            <p>LONGCHI SMART</p>
-            <h1>
-              Four disciplines.
-              <br />A world of possibilities.
-            </h1>
-            <p>
-              Lighting, traffic safety, parking and access control.
-              <br />
-              Start with your site. Meet the company behind the conversation.
-            </p>
-            <a className="button" href="#solutions">
-              Explore our four product lines
-              <ArrowUpRight size={18} />
-            </a>
-          </div>
-          <div className="corporate-hero-scene-strip">
-            {[
-              "campus-hero",
-              "traffic-scene",
-              "parking-scene",
-              "access-scene",
-            ].map((name, i) => (
-              <a href={`/solutions/${solutions[i].slug}/`} key={name}>
-                <img
-                  src={`/images/redesign/${name}.webp`}
-                  alt={`Illustrative ${solutions[i].name.toLowerCase()} application`}
-                  width="1536"
-                  height="1024"
-                />
-                <span>
-                  {solutions[i].shortName}
-                  <ArrowUpRight size={18} />
-                </span>
-              </a>
+        <span className="home-carousel-caption">{slide.caption}</span>
+      </div>
+      <div className="home-carousel-controls">
+        <div className="container">
+          <div
+            className="home-carousel-tabs"
+            role="tablist"
+            aria-label="Choose a banner"
+          >
+            {bannerSlides.map((s, i) => (
+              <button
+                type="button"
+                role="tab"
+                id={`home-banner-tab-${i}`}
+                key={s.label}
+                aria-selected={active === i}
+                aria-controls="home-banner-panel"
+                aria-label={`Banner ${i + 1}: ${s.label}`}
+                tabIndex={active === i ? 0 : -1}
+                onClick={() => select(i)}
+                onKeyDown={(e) => keys(e, i)}
+              >
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                <strong>{s.label}</strong>
+              </button>
             ))}
           </div>
-          <small>Application scenes are illustrative.</small>
+          <div
+            className="home-carousel-arrows"
+            role="group"
+            aria-label="Banner navigation"
+          >
+            <button
+              type="button"
+              aria-label="Previous banner"
+              onClick={() => select(active - 1)}
+            >
+              <ArrowLeft size={21} aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next banner"
+              onClick={() => select(active + 1)}
+            >
+              <ArrowRight size={21} aria-hidden="true" />
+            </button>
+          </div>
         </div>
-      )}
-      <div className="corporate-hero-foot container">
-        <span>Lighting. Traffic. Parking. Access.</span>
-        <a href="#company">
-          Get to know us
-          <ArrowDown size={17} />
-        </a>
       </div>
     </section>
   );

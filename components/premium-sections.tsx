@@ -84,33 +84,25 @@ export function PremiumSolutions() {
             ))}
           </div>
           <div
-            className="prem-solution-visual"
+            className="prem-solution-panel"
             id="prem-solution-panel"
             role="tabpanel"
             aria-labelledby={`prem-solution-tab-${active}`}
             tabIndex={0}
           >
-            <img
-              key={v.scene}
-              className="prem-solution-scene"
-              src={v.scene}
-              alt={v.alt}
-              width="1536"
-              height="1024"
-              loading="lazy"
-            />
-            <span className="prem-image-note">Illustrative application</span>
-            <a
-              href={`/solutions/${s.slug}/`}
-              className="prem-solution-equipment"
-            >
+            <div className="prem-solution-visual">
               <img
-                src={s.image}
-                alt={s.imageAlt}
-                width="220"
-                height="200"
+                key={v.scene}
+                className="prem-solution-scene"
+                src={v.scene}
+                alt={v.alt}
+                width="1536"
+                height="1024"
                 loading="lazy"
               />
+              <span className="prem-image-note">Illustrative application</span>
+            </div>
+            <a href={`/solutions/${s.slug}/`} className="prem-solution-action">
               <span>
                 Explore {s.shortName.toLowerCase()}
                 <ArrowUpRight size={19} aria-hidden="true" />

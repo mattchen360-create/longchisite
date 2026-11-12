@@ -1,0 +1,306 @@
+/* Four full-width slides; no inset photographs or floating equipment cards. */
+.home-carousel {
+  background: var(--blue);
+  color: #fff;
+}
+.home-carousel-stage {
+  position: relative;
+  isolation: isolate;
+  height: clamp(620px, calc(100svh - 165px), 760px);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.home-carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -3;
+}
+.home-carousel-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #001a66ed 0%,
+    #001a66c4 32%,
+    #001a6670 61%,
+    #001a6614 100%
+  );
+  z-index: -2;
+}
+.home-carousel-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  padding-block: 65px 85px;
+}
+.home-carousel-copy > p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 27px;
+}
+.premium-site .home-carousel h1 {
+  font-size: clamp(62px, 6vw, 88px);
+  letter-spacing: -4px;
+  line-height: 1.06;
+  font-weight: 550;
+  max-width: 1000px;
+  text-align: left;
+  text-wrap: initial;
+}
+.home-carousel-description {
+  font-size: 18px;
+  line-height: 1.9;
+  max-width: 580px;
+  margin-top: 30px;
+}
+.home-carousel-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.home-carousel-actions > a:last-child {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.home-carousel-caption {
+  position: absolute;
+  right: max(105px, calc((100vw - 1360px) / 2));
+  bottom: 20px;
+  font-size: 10px;
+  line-height: 1.6;
+  background: #001a66c9;
+  padding: 5px 9px;
+}
+.home-carousel-controls > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+.home-carousel-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  flex: 1;
+  max-width: 1000px;
+}
+.home-carousel-tabs button {
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 84px;
+  padding: 20px 25px;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+}
+.home-carousel-tabs button > span {
+  font-size: 12px;
+  font-weight: 500;
+}
+.home-carousel-tabs button > strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+.home-carousel-tabs button[aria-selected="true"] {
+  background: var(--yellow);
+  color: var(--blue);
+}
+.home-carousel-tabs button:not([aria-selected="true"]):hover {
+  background: #103db0;
+}
+.home-carousel-arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.home-carousel-arrows > button {
+  border: 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #1640b3;
+}
+.home-carousel-arrows > button:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+.prem-solution-panel {
+  min-width: 0;
+}
+.prem-solution-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0 0;
+  font-size: 14px;
+  font-weight: 650;
+  min-height: 48px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.prem-solution-action > span {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .premium-site .home-carousel h1 {
+    font-size: 65px;
+    letter-spacing: -3px;
+  }
+  .home-carousel-tabs button {
+    gap: 12px;
+    padding-inline: 17px;
+  }
+  .home-carousel-tabs button > strong {
+    font-size: 13px;
+  }
+  .home-carousel-controls > .container {
+    gap: 22px;
+  }
+  .home-carousel-description {
+    max-width: 550px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 850px) {
+  .home-carousel-tabs button {
+    justify-content: center;
+    padding-inline: 12px;
+    min-height: 72px;
+  }
+  .home-carousel-tabs button > strong {
+    display: none;
+  }
+  .home-carousel-tabs button > span {
+    font-size: 16px;
+  }
+  .home-carousel-controls > .container {
+    gap: 25px;
+  }
+  .home-carousel-tabs {
+    max-width: 420px;
+  }
+}
+@media (max-width: 760px) {
+  .home-carousel-stage {
+    height: 610px;
+    min-height: 0;
+  }
+  .home-carousel-image {
+    object-position: 57% center;
+  }
+  .home-carousel-shade {
+    background: linear-gradient(90deg, #001a66eb, #001a6699 80%, #001a6680);
+  }
+  .home-carousel-copy {
+    padding-block: 45px 70px;
+  }
+  .home-carousel-copy > p:first-child {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  .premium-site .home-carousel h1 {
+    font-size: 48px;
+    letter-spacing: -2.5px;
+    line-height: 1.08;
+    max-width: 100%;
+  }
+  .home-carousel-description {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 25px;
+    max-width: 390px;
+  }
+  .home-carousel-actions {
+    gap: 23px;
+    margin-top: 26px;
+  }
+  .premium-site .home-carousel-actions .button {
+    font-size: 12px;
+    padding: 13px 17px;
+    min-height: 48px;
+    gap: 12px;
+  }
+  .home-carousel-actions > a:last-child {
+    font-size: 12px;
+  }
+  .home-carousel-caption {
+    right: 20px;
+    bottom: 17px;
+    max-width: calc(100% - 40px);
+    font-size: 9px;
+  }
+  .home-carousel-tabs button {
+    min-height: 68px;
+    padding: 15px 10px;
+  }
+  .home-carousel-tabs button > span {
+    font-size: 14px;
+  }
+  .home-carousel-arrows {
+    gap: 7px;
+  }
+  .home-carousel-arrows > button {
+    width: 40px;
+    height: 40px;
+  }
+  .home-carousel-controls > .container {
+    gap: 20px;
+  }
+  .prem-solution-action {
+    font-size: 13px;
+    padding-top: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .premium-site .home-carousel h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+  .home-carousel-description {
+    font-size: 14px;
+  }
+  .home-carousel-actions {
+    gap: 16px;
+  }
+  .home-carousel-stage {
+    height: 590px;
+  }
+  .home-carousel-actions > a:last-child {
+    font-size: 11px;
+  }
+  .home-carousel-controls > .container {
+    gap: 14px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home-carousel-image {
+    animation: home-banner-change 0.35s ease-out;
+  }
+  @keyframes home-banner-change {
+    from {
+      opacity: 0.45;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -21,8 +21,4 @@ export const homeModules = [
   { id: "enquiry", label: "联系与询盘", group: "沟通" },
 ] as const;
 
-export const heroOptions = [
-  "A 品牌与企业实拍",
-  "B 全景生产现场",
-  "C 四业务场景拼接",
-];
+export { bannerSlides } from "@/content/banner";
