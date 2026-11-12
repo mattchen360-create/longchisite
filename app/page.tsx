@@ -5,4 +5,4 @@ export const metadata = pageMetadata(
   "Meet LONGCHI SMART: company capabilities, lighting manufacturing, technical resources and four product lines for lighting, traffic, parking and access projects.",
   "/",
 );
-export default HomePage;
+export default function Page(){return <HomePage/>;}

@@ -1,0 +1,85 @@
+{
+  "context": "Supplied Hunan LONGCHI materials; do not transfer credentials or history to the Shenzhen legal entity.",
+  "assets": [
+    {
+      "key": "exhibition",
+      "source": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\项目、比赛、研讨会\\展会\\第十五届中国国际道路交通安全产品博览会\\2350c60c97ae45cd997936005522cd33.jpg",
+      "output": "public/images/company-story/exhibition.webp",
+      "source_size": [
+        1440,
+        1080
+      ],
+      "output_size": [
+        1440,
+        1080
+      ],
+      "processing": "Whole-image technical resizing and WebP encoding only. Certificate orientation is handled in CSS. No retouching or regenerated content.",
+      "source_sha256": "bfa2dde1a43cf5394842553bd238a692c58dd54cded85c0073f76ef9f4cefcef",
+      "output_sha256": "36a902f81b0b2d3ff6f2f0f4c5b23411746b2d8ae5d06fb13a0a7a69980215fa"
+    },
+    {
+      "key": "technical-meeting",
+      "source": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\项目、比赛、研讨会\\道路冰雨雪监测研发指导交流会\\60.jpg",
+      "output": "public/images/company-story/technical-meeting.webp",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "output_size": [
+        1800,
+        1013
+      ],
+      "processing": "Whole-image technical resizing and WebP encoding only. Certificate orientation is handled in CSS. No retouching or regenerated content.",
+      "source_sha256": "81cf2b4e37886122f95e4c0bf7623bf9eefb444a0fe15c6028cdb42b6976c4ac",
+      "output_sha256": "7c183dc515ab908f1d78a4b949b491243fe252119f8f85b38e26ffabf72f73b3"
+    },
+    {
+      "key": "field-discussion",
+      "source": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\项目、比赛、研讨会\\道路冰雨雪监测研发指导交流会\\62.jpg",
+      "output": "public/images/company-story/field-discussion.webp",
+      "source_size": [
+        1439,
+        1080
+      ],
+      "output_size": [
+        1439,
+        1080
+      ],
+      "processing": "Whole-image technical resizing and WebP encoding only. Certificate orientation is handled in CSS. No retouching or regenerated content.",
+      "source_sha256": "6896c5d6ff7d2af5b600ddaef76bbd7bfd80f9462b4d1f1741c15dd9b9073776",
+      "output_sha256": "af42d1a51004345468cf41347b4f59db849a4c083959c71672d45d58372b9b11"
+    },
+    {
+      "key": "high-tech-certificate",
+      "source": "E:\\龙弛文件夹\\00 龙弛待归类资料收件箱\\龙弛公司素材准备\\龙弛公司资料4.30\\高新技术企业证书.jpg",
+      "output": "public/images/company-story/high-tech-certificate.webp",
+      "source_size": [
+        2054,
+        3000
+      ],
+      "output_size": [
+        1232,
+        1800
+      ],
+      "processing": "Whole-image technical resizing and WebP encoding only. Certificate orientation is handled in CSS. No retouching or regenerated content.",
+      "source_sha256": "57dc53870de2fd1e90e3ba99a9bb8da01bf40fc84c17ebdfcf002ae0a1f96148",
+      "output_sha256": "0028ab97f41863fd047071ab449ab943852cc9747f3259a05c5afe894befd4e5"
+    }
+  ],
+  "video": {
+    "source": "E:\\龙弛文件夹\\02 龙弛资料库\\01 公司资料\\07 公司视频\\生产制造车间.mp4",
+    "output": "public/videos/lighting-workshop.mp4",
+    "source_sha256": "6ebd183a0df87ca7372b54bd79256000e8343b7bd8ffdac86ae5cc6b7ed156c9",
+    "output_sha256": "a89c34f1b20d43d9e435e8602ed38fe3e2e4f69e13dff1b51be11c74edacbc29",
+    "duration_seconds": 27.349333,
+    "processing": "Full original sequence transcoded H264 CRF29 maxrate1300k and AAC80k, 1280x720, faststart. No cuts, added content or speed changes. User-initiated HTML video, no autoplay, preload none.",
+    "poster": "public/images/company-story/workshop-poster.webp",
+    "poster_processing": "Unretouched frame extracted at 5 seconds."
+  },
+  "review_notes": {
+    "exhibition": "Visible Hunan LONGCHI company name on booth, roadside displays and visitors. No customer identities or event endorsement inferred.",
+    "technical_meeting": "Supplied road-weather monitoring technical exchange folder; exact roles and agreements not inferred.",
+    "field_discussion": "Supplied same technical exchange folder; people on wet road, no completed project claimed.",
+    "certificate": "Names Hunan LONGCHI; GR202343005931; issued 2023-12-08 with stated three-year term. Displayed as dated company archive, not independently verified current certification."
+  }
+}

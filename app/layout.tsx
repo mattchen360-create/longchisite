@@ -12,6 +12,7 @@ import "./brand-editorial.css";
 import "./interactive-modules.css";
 import "./premium.css";
 import "./contact-refinement.css";
+import "./company-home.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),

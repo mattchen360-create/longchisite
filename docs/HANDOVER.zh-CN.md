@@ -10,6 +10,10 @@
 
 ## 更新内容
 
+公司首页候选版以 `docs/COMPANY-HOME-OPTIONS.zh-CN.md` 为最新首页说明：20 个可筛选板块、3 种企业 Banner，首页不再加载产品资料下载与型号展厅。`components/home-composition.tsx` 组合真实内容；`content/home-modules.ts` 管理中文筛选清单。用户打开 `/review/` 可逐块隐藏/恢复、切换 Banner、复制结果；选择仅在当前浏览器保存，不修改普通首页或数据库。该页 noindex，并从 sitemap 排除。`components/company-story.tsx`、`corporate-hero.tsx` 和最后加载的 `app/company-home.css` 管理本轮内容与样式。原产品/资源页继续维护各自内容。
+
+新增公司实拍、历史证书与完整车间视频的来源及哈希见 `content/company-story-provenance.json`；视频仅用户点击播放，`preload="none"`。历史、资质、展会和工厂内容按湖南主体标注，国际询盘继续由深圳主体接收。
+
 侧边联系与首页最新两处优化见 `docs/CONTACT-AND-MODULES.zh-CN.md`。联系方式、原始微信二维码路径和已确认社媒主页集中在 `content/contact.ts`；全站入口由 `components/contact-tools.tsx` 管理，并复用于页脚。最后加载的 `app/contact-refinement.css` 负责悬浮栏、手机底栏、应用大小图与技术资料展厅。
 
 公司与产品文案：`content/site.ts`。图片：`public/images/`。来源记录：`content/asset-provenance.json`。规格下载：`public/downloads/`。
