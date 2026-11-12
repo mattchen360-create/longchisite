@@ -2,7 +2,7 @@
 
 ## 联系入口
 
-`components/contact-tools.tsx` 提供全站右侧联系栏，桌面为 WhatsApp、Email、WeChat、Facebook、YouTube 与滚动后返回顶部；手机为固定底部 WhatsApp、Email、WeChat、Enquire 四入口。桌面预留右侧空间，手机预留底部安全区域。隐私提示避开底栏；菜单、相册和微信弹窗打开时隐藏联系栏。后台不显示营销联系工具。
+`components/contact-tools.tsx` 提供全站右侧联系栏，桌面为 WhatsApp、Email、WeChat、Facebook、YouTube 与滚动后返回顶部；手机为固定底部 WhatsApp、Email、WeChat、Enquire 四入口。桌面联系栏固定悬浮在内容上方，不预留侧栏、不缩窄页面；Banner 背景和导航恢复全宽，首屏产品卡局部避让联系栏。手机预留底部安全区域。隐私提示避开底栏；菜单、相册和微信弹窗打开时隐藏联系栏。后台不显示营销联系工具。
 
 资料来自现有网站和 Matt 名片：`matt@longchismart.com`、WhatsApp `+86 173 0446 6938`。二维码来自品牌名片目录 `微信Matt.jpg`，逐字节复制，SHA-256 及路径见 `content/contact-image-provenance.json`。点击微信在原生 dialog 显示 Matt、扫码说明、保存原图和邮件复制；支持 Tab 循环、Esc、关闭按钮、点击遮罩和焦点返回。二维码是用户原始联系方式，未生成或重绘；未进行真实加好友测试。
 

@@ -459,16 +459,13 @@ body:has(dialog[open]) .contact-tools {
 }
 
 @media (min-width: 1181px) {
-  .premium-site:has(.contact-tools) {
-    padding-right: 92px;
-  }
   .contact-tools {
     right: 9px;
     width: 74px;
   }
   .prem-hero-product,
   .prem-hero-illustration {
-    right: max(40px, calc((100vw - 1452px) / 2));
+    right: max(104px, calc((100vw - 1360px) / 2));
   }
   .premium-site .prem-main-nav {
     gap: 24px;
@@ -491,9 +488,6 @@ body:has(dialog[open]) .contact-tools {
   }
   .contact-tooltip {
     font-size: 12px;
-  }
-  .premium-site:has(.contact-tools) {
-    padding-right: 77px;
   }
   .premium-site .header-inner {
     gap: 16px;
