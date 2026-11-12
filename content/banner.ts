@@ -2,9 +2,9 @@ export const bannerSlides = [
   {
     label: "LONGCHI SMART",
     reviewLabel: "01 企业品牌",
-    title: ["Meet LONGCHI.", "Build with us."],
+    title: ["Meet LONGCHI.", "See the work."],
     description:
-      "Lighting, traffic, parking and access. Meet the people and the work behind your next project.",
+      "Lighting, traffic, parking and access. Explore the company, the workshop and the people behind your enquiry.",
     image: "/images/factory-assembly.webp",
     alt: "Lighting assembly from Hunan LONGCHI company photography",
     caption: "Hunan LONGCHI · Lighting assembly",

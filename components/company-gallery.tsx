@@ -8,6 +8,11 @@ const photos = [
     alt: "People assembling lighting products at workstations along a production line",
   },
   {
+    src: "/images/factory-line.webp",
+    title: "Lighting production line",
+    alt: "Supplied photograph of the Hunan LONGCHI lighting manufacturing line",
+  },
+  {
     src: "/images/company/engineering.webp",
     title: "Technical workspace",
     alt: "People at computers with electrical components and a test meter",

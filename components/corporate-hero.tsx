@@ -1,11 +1,9 @@
 "use client";
 import {
-  useEffect,
   useLayoutEffect,
   useRef,
   useState,
   type KeyboardEvent,
-  type PointerEvent,
 } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { bannerSlides } from "@/content/banner";
@@ -19,9 +17,7 @@ export function CorporateHero({
     previous: number | null;
     direction: number;
   }>({ previous: null, direction: 1 });
-  const stage = useRef<HTMLDivElement>(null),
-    frame = useRef(0),
-    requestedDirection = useRef<number | null>(null);
+  const requestedDirection = useRef<number | null>(null);
   const start = useRef<{ x: number; y: number } | null>(null);
   const active = activeSlide ?? internal,
     slide = bannerSlides[active];
@@ -37,29 +33,6 @@ export function CorporateHero({
       requestedDirection.current = null;
     }
   }, [active]);
-  useEffect(() => () => cancelAnimationFrame(frame.current), []);
-  function pointer(e: PointerEvent<HTMLDivElement>) {
-    if (
-      e.pointerType !== "mouse" ||
-      !matchMedia(
-        "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
-      ).matches
-    )
-      return;
-    const r = e.currentTarget.getBoundingClientRect(),
-      x = (e.clientX - r.left) / r.width - 0.5,
-      y = (e.clientY - r.top) / r.height - 0.5;
-    cancelAnimationFrame(frame.current);
-    frame.current = requestAnimationFrame(() => {
-      stage.current?.style.setProperty("--banner-x", String(x));
-      stage.current?.style.setProperty("--banner-y", String(y));
-    });
-  }
-  function resetPointer() {
-    cancelAnimationFrame(frame.current);
-    stage.current?.style.setProperty("--banner-x", "0");
-    stage.current?.style.setProperty("--banner-y", "0");
-  }
   function select(index: number) {
     const next = (index + bannerSlides.length) % bannerSlides.length;
     if (next === active) return;
@@ -87,9 +60,6 @@ export function CorporateHero({
     >
       <div
         className="home-carousel-stage"
-        ref={stage}
-        onPointerMove={pointer}
-        onPointerLeave={resetPointer}
         id="home-banner-panel"
         role="tabpanel"
         aria-labelledby={`home-banner-tab-${active}`}

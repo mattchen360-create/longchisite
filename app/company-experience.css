@@ -1,0 +1,148 @@
+/* Company material is the focal point. The blue/yellow system remains LONGCHI's. */
+.company-first-home {
+  --experience-ease: cubic-bezier(.22, .8, .2, 1);
+}
+.company-first-home h2 { text-wrap: balance; }
+.company-first-home .story-section { padding-block: clamp(80px, 8vw, 130px); }
+.company-first-home .story-copy > p:not(.story-label) { line-height: 1.8; }
+.company-first-home .company-portrait { background: #f2f7ff; }
+.company-first-home .company-portrait-layout { gap: clamp(40px, 5vw, 80px); }
+.company-first-home .company-portrait-visual .story-photo-window > img { height: 410px; }
+.company-first-home .company-portrait-note { background: #0028a0; color: white; margin-top: 0; padding: 28px 30px; }
+.company-first-home .company-portrait-note strong { font-size: 24px; font-weight: 500; }
+.company-first-home .company-portrait-visual figcaption { background: #f2f7ff; }
+
+.company-archive { background: #0028a0; color: white; }
+.archive-heading, .workshop-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 48px; }
+.archive-heading > p { max-width: 300px; font-size: 16px; line-height: 1.75; }
+.archive-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 68px; align-items: stretch; }
+.archive-narrative { display: flex; flex-direction: column; min-width: 0; }
+.archive-years { display: flex; gap: 12px; margin-bottom: 32px; }
+.archive-years > button { min-height: 46px; min-width: 85px; padding: 10px 17px; color: white; background: #ffffff14; border: 0; font-size: 16px; cursor: pointer; }
+.archive-years > button[aria-selected="true"] { color: #0028a0; background: #f8b000; }
+.archive-years > button:hover:not([aria-selected="true"]) { background: #ffffff28; }
+.archive-copy { flex: 1; }
+.archive-copy-inner { min-height: 320px; }
+.archive-year { display: block; color: #f8b000; font-size: clamp(85px, 9vw, 130px); line-height: 1; letter-spacing: -.065em; margin: 0 0 24px -6px; font-weight: 450; }
+.archive-copy h3 { font-size: clamp(25px, 2.3vw, 32px); line-height: 1.25; font-weight: 500; letter-spacing: -.035em; margin-bottom: 20px; }
+.archive-copy p { font-size: 16px; line-height: 1.8; max-width: 450px; }
+.archive-link { display: flex; align-items: center; justify-content: space-between; min-height: 48px; gap: 25px; font-size: 14px; margin-top: 25px; max-width: 245px; }
+.archive-link:hover { color: #f8b000; }
+.archive-visual { margin: 0; min-width: 0; min-height: 480px; position: relative; overflow: hidden; background: #001a66; }
+.archive-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.archive-visual-contain { background: #f2f7ff; }
+.archive-document { position: absolute; inset: 0; width: 100%; height: 100%; padding: 24px 24px 64px; }
+.archive-visual > figcaption { position: absolute; inset: auto 0 0; padding: 13px 20px; font-size: 11px; line-height: 1.5; color: white; background: #001a66; }
+.archive-source { margin-top: 30px; max-width: 850px; font-size: 11px; line-height: 1.8; }
+
+.workshop-experience { background: #f2f7ff; }
+.workshop-heading .story-label { margin-bottom: 18px; }
+.workshop-heading h2 { margin-bottom: 0; }
+.workshop-heading > a { max-width: 260px; line-height: 1.7; flex-shrink: 0; margin: 0; }
+.workshop-stage { display: grid; grid-template-columns: 1.9fr 1fr; min-height: 530px; }
+.workshop-image-frame { position: relative; min-width: 0; overflow: hidden; background: #001a66; }
+.workshop-image-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; visibility: hidden; }
+.workshop-image-frame > img.is-current { opacity: 1; visibility: visible; }
+.workshop-image-frame .gallery-open { position: absolute; left: 24px; right: auto; bottom: 24px; color: #0028a0; background: white; min-height: 46px; padding: 12px 17px; }
+.workshop-information { background: #0028a0; color: white; display: flex; flex-direction: column; justify-content: space-between; padding: 45px 38px 32px; min-width: 0; }
+.workshop-copy > p:first-child { font-size: 13px; line-height: 1.6; margin-bottom: 40px; }
+.workshop-copy > h3 { font-size: clamp(28px, 2.6vw, 39px); line-height: 1.15; letter-spacing: -.045em; font-weight: 500; margin-bottom: 26px; }
+.workshop-copy > p:last-child { font-size: 15px; line-height: 1.85; }
+.workshop-view-controls { display: flex; align-items: center; gap: 10px; margin-top: 35px; }
+.workshop-view-controls > span { margin-right: auto; font-size: 13px; font-variant-numeric: tabular-nums; }
+.workshop-view-controls > button { width: 46px; height: 46px; display: grid; place-items: center; background: #ffffff14; color: white; border: 0; cursor: pointer; }
+.workshop-view-controls > button:hover { background: #f8b000; color: #0028a0; }
+.workshop-tabs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); background: white; }
+.workshop-tabs > button { background: transparent; border: 0; color: #0028a0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 25px 30px; min-height: 86px; text-align: left; cursor: pointer; }
+.workshop-tabs strong { font-size: 17px; font-weight: 550; }
+.workshop-tabs > button[aria-selected="true"] { background: #f8b000; }
+.workshop-tabs > button:not([aria-selected="true"]):hover { background: #e7efff; }
+.workshop-source { margin-top: 17px; font-size: 11px; line-height: 1.8; }
+.company-archive :focus-visible, .workshop-experience :focus-visible { outline: 3px solid #0070e8; outline-offset: 5px; }
+.archive-years > button:focus-visible, .archive-link:focus-visible, .workshop-view-controls > button:focus-visible { outline-color: white; }
+
+/* The opening image has room to breathe; a clear title precedes supporting detail. */
+.home-carousel-stage { height: clamp(590px, calc(100svh - 178px), 820px); }
+.premium-site .home-carousel h1 { font-size: clamp(64px, 6.6vw, 104px); font-weight: 450; letter-spacing: -.055em; line-height: 1.02; }
+.home-carousel-copy { padding-block: 60px 70px; }
+.home-carousel-copy > p:first-child { font-size: 15px; font-weight: 500; margin-bottom: 30px; }
+.home-carousel-description { max-width: 490px; font-size: 17px; line-height: 1.75; margin-top: 30px; }
+.home-carousel-controls { background: #0028a0; }
+.home-carousel-tabs button { min-height: 90px; padding-inline: 25px; }
+.home-carousel-tabs button > strong { font-weight: 500; }
+.home-carousel-arrows > button { background: transparent; border: 1px solid #ffffff50; border-radius: 50%; width: 48px; height: 48px; }
+.home-carousel-caption { font-size: 11px; }
+.home-carousel-shade { background: linear-gradient(90deg, #001a66f0 0%, #001a66bf 37%, #001a6645 70%, #001a6610 100%); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .archive-copy-inner, .workshop-copy { animation: experience-copy 360ms var(--experience-ease) both; }
+  .archive-visual > img, .archive-document { animation: experience-photo 650ms var(--experience-ease) both; }
+  .workshop-image-frame > img.is-current { animation: experience-photo 650ms var(--experience-ease) both; }
+  .archive-years > button, .workshop-tabs > button, .workshop-view-controls > button { transition: background-color 180ms, color 180ms; }
+  @keyframes experience-copy { from { opacity: .1; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes experience-photo { from { opacity: .3; transform: scale(1.035); } to { opacity: 1; transform: scale(1); } }
+}
+@media (max-width: 1100px) {
+  .archive-layout { gap: 40px; grid-template-columns: 1fr 1.2fr; }
+  .archive-visual { min-height: 450px; }
+  .workshop-stage { grid-template-columns: 1.5fr 1fr; }
+  .workshop-information { padding: 35px 28px 28px; }
+  .workshop-tabs > button { padding-inline: 24px; }
+  .premium-site .home-carousel h1 { font-size: 74px; }
+  .home-carousel-tabs button { padding-inline: 17px; }
+}
+@media (max-width: 850px) {
+  .archive-heading, .workshop-heading { align-items: start; flex-direction: column; gap: 22px; margin-bottom: 35px; }
+  .archive-heading > p { max-width: 500px; }
+  .archive-layout { gap: 32px; }
+  .archive-years { gap: 8px; }
+  .archive-years > button { min-width: 70px; padding-inline: 12px; }
+  .archive-copy-inner { min-height: 350px; }
+  .workshop-stage { display: flex; flex-direction: column; }
+  .workshop-image-frame { height: 430px; }
+  .workshop-information { padding: 30px; }
+  .workshop-copy > p:first-child { margin-bottom: 20px; }
+  .workshop-copy > h3 { font-size: 34px; }
+  .workshop-copy > p:last-child { max-width: 620px; }
+  .workshop-view-controls { margin-top: 24px; }
+  .workshop-tabs > button { padding: 22px; }
+  .workshop-tabs strong { font-size: 15px; }
+}
+@media (max-width: 600px) {
+  .company-first-home .story-section { padding-block: 74px; }
+  .company-first-home .company-portrait-visual .story-photo-window > img { height: 270px; }
+  .company-first-home .company-portrait-note { padding: 24px; grid-template-columns: 90px 1fr; gap: 16px; }
+  .company-first-home .company-portrait-note strong { font-size: 20px; }
+  .archive-layout { display: flex; flex-direction: column; gap: 30px; }
+  .archive-heading h2, .workshop-heading h2 { font-size: 36px; line-height: 1.12; letter-spacing: -.045em; }
+  .archive-heading > p { font-size: 15px; }
+  .archive-years { margin-bottom: 30px; }
+  .archive-years > button { flex: 1; min-width: 0; }
+  .archive-copy-inner { min-height: 300px; }
+  .archive-year { font-size: 94px; margin-bottom: 22px; }
+  .archive-copy h3 { font-size: 28px; }
+  .archive-copy p { font-size: 15px; }
+  .archive-link { margin-top: 12px; }
+  .archive-visual { min-height: 400px; }
+  .archive-visual-contain { min-height: 400px; }
+  .archive-source { font-size: 11px; }
+  .workshop-heading > a { font-size: 13px; max-width: none; }
+  .workshop-image-frame { height: 300px; }
+  .workshop-image-frame .gallery-open { left: 16px; bottom: 16px; font-size: 12px; }
+  .workshop-information { padding: 28px 24px 24px; min-height: 390px; }
+  .workshop-copy > h3 { font-size: 31px; max-width: 280px; margin-bottom: 20px; }
+  .workshop-copy > p:last-child { font-size: 14px; }
+  .workshop-tabs { grid-template-columns: 1fr; }
+  .workshop-tabs > button { min-height: 62px; padding: 18px 24px; }
+  .workshop-tabs strong { font-size: 16px; }
+  .premium-site .home-carousel h1 { font-size: clamp(40px, 10.6vw, 60px); letter-spacing: -.05em; line-height: 1.08; }
+  .home-carousel-stage { height: 590px; }
+  .home-carousel-copy { padding-block: 45px 65px; }
+  .home-carousel-copy > p:first-child { font-size: 13px; margin-bottom: 25px; }
+  .home-carousel-description { font-size: 15px; max-width: 360px; line-height: 1.8; margin-top: 24px; }
+  .home-carousel-tabs button { min-height: 68px; padding-inline: 10px; }
+  .home-carousel-arrows > button { width: 44px; height: 44px; }
+  .home-carousel-arrows { gap: 8px; }
+  .home-carousel-caption { font-size: 10px; }
+  .home-carousel-shade { background: linear-gradient(90deg, #001a66ee, #001a66aa 80%, #001a6688); }
+}

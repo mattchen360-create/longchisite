@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { site } from "@/content/site";
 import { directContact } from "@/content/contact";
-import { CompanyGallery } from "@/components/company-gallery";
+import { CompanyArchive, FactoryExperience } from "@/components/company-experience";
 function Photo({
   src,
   alt,
@@ -81,103 +81,10 @@ export function CompanyPortrait() {
   );
 }
 export function CompanyHistory() {
-  return (
-    <section className="company-history story-section" id="history">
-      <div className="container">
-        <div className="story-heading">
-          <div>
-            <p className="story-label">Our background</p>
-            <h2>
-              A story built
-              <br />
-              through practical work.
-            </h2>
-          </div>
-          <p>Selected moments from the Hunan LONGCHI company archive.</p>
-        </div>
-        <div className="history-moments">
-          <article>
-            <span>2018</span>
-            <h3>A company takes shape.</h3>
-            <p>
-              The supplied profile records the establishment of Hunan LONGCHI in
-              Pingjiang, Hunan, with a focus on lighting and smart applications.
-            </p>
-          </article>
-          <article>
-            <span>2023</span>
-            <h3>A documented milestone.</h3>
-            <p>
-              The archived high-tech enterprise certificate names the Hunan
-              company and carries an issue date of 8 December 2023.
-            </p>
-          </article>
-          <article>
-            <span>2025</span>
-            <h3>Meeting the industry.</h3>
-            <p>
-              Company exhibition materials include the 15th China International
-              Road Traffic Security Products Expo in Wuhan.
-            </p>
-          </article>
-        </div>
-        <p className="story-source">
-          Historical materials refer to the Hunan company. They do not establish
-          the Shenzhen company’s founding date or certification status.
-        </p>
-      </div>
-    </section>
-  );
+  return <CompanyArchive />;
 }
 export function FactoryStory() {
-  return (
-    <section className="factory-story story-section" id="factory">
-      <div className="container">
-        <div className="story-heading">
-          <div>
-            <p className="story-label">A look inside</p>
-            <h2>
-              See where the
-              <br />
-              work takes shape.
-            </h2>
-          </div>
-          <Link href="/contact/?topic=company-profile">
-            Ask about the manufacturing profile
-          </Link>
-        </div>
-        <div className="factory-story-layout">
-          <div className="factory-story-main">
-            <Photo
-              src="/images/factory-assembly.webp"
-              alt="People and lighting components along assembly workstations"
-              caption="Lighting assembly · Hunan LONGCHI company photography"
-            />
-            <CompanyGallery currentImage="/images/factory-assembly.webp" />
-          </div>
-          <div className="factory-story-side">
-            <Photo
-              src="/images/factory-line.webp"
-              alt="Supplied manufacturing line photograph"
-              caption="A view of the production line"
-            />
-            <div>
-              <h3>
-                From components
-                <br />
-                to the proposed equipment.
-              </h3>
-              <p>
-                Workstations, prepared materials and products in progress offer
-                a closer look at the lighting manufacturing story. Discuss the
-                model, configuration and supply scope for your own project.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return <FactoryExperience />;
 }
 export function EngineeringStory() {
   return (

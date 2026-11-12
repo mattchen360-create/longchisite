@@ -72,3 +72,9 @@ Analytics 与广告测量同意独立控制。询盘记录不包含未经允许�
 
 
 交付咨询：`/contact/?topic=delivery-planning` 带入数量、目的地、日期、包装单证和交接要求；只生成可编辑咨询模板，不自动报价或承诺交期。
+
+## 企业视觉与互动档案
+
+GitHub Skills 筛选和本轮应用说明见 `docs/SKILLS-VISUAL-UPGRADE.zh-CN.md`。企业历程和工厂实景的数据在 `components/company-experience.tsx`：替换对应条目的 `image`、`alt` 和说明即可更新，年份及证书事实需先核对资料。原公司图库在 `components/company-gallery.tsx`，已补入生产线原图。交互只切换图片和说明，不影响询盘后台。
+
+动态效果：Banner、档案和工厂图片使用 CSS transform/opacity。工程与展会照片仅在浏览器支持且用户未选择减少动态效果时启用原生 view timeline；此前的 `HomeMotion` JavaScript scroll 测量已删除。`docs/MOTION-DESIGN.zh-CN.md` 的 v14 pointer/depth 测量描述属于上一版，现以本节为准。
