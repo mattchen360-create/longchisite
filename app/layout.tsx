@@ -3,6 +3,7 @@ import { env } from "cloudflare:workers";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ConsentManager } from "@/components/consent-manager";
+import { ContactTools } from "@/components/contact-tools";
 import { site } from "@/content/site";
 import "./site.css";
 import "./redesign.css";
@@ -10,6 +11,7 @@ import "./home-sections.css";
 import "./brand-editorial.css";
 import "./interactive-modules.css";
 import "./premium.css";
+import "./contact-refinement.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),
@@ -36,6 +38,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <ContactTools />
         <ConsentManager
           googleAdsId={
             (env as unknown as Record<string, string | undefined>).GOOGLE_ADS_ID

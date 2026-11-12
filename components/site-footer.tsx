@@ -1,6 +1,12 @@
 "use client";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { site, solutions } from "@/content/site";
+import { directContact } from "@/content/contact";
+import {
+  SocialLinks,
+  WeChatButton,
+  WhatsAppIcon,
+} from "@/components/contact-tools";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -44,7 +50,19 @@ export function SiteFooter() {
         </div>
         <div className="footer-contact">
           <h2>Let’s talk</h2>
+          <div className="footer-contact-channels">
+            <a
+              href={directContact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon size={20} />
+              <span>WhatsApp</span>
+            </a>
+            <WeChatButton />
+          </div>
           <a href={`tel:+${site.whatsapp}`}>{site.phone}</a>
+          <SocialLinks />
           <p>{site.address}</p>
         </div>
       </div>

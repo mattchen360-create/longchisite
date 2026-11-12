@@ -10,6 +10,8 @@
 
 ## 更新内容
 
+侧边联系与首页最新两处优化见 `docs/CONTACT-AND-MODULES.zh-CN.md`。联系方式、原始微信二维码路径和已确认社媒主页集中在 `content/contact.ts`；全站入口由 `components/contact-tools.tsx` 管理，并复用于页脚。最后加载的 `app/contact-refinement.css` 负责悬浮栏、手机底栏、应用大小图与技术资料展厅。
+
 公司与产品文案：`content/site.ts`。图片：`public/images/`。来源记录：`content/asset-provenance.json`。规格下载：`public/downloads/`。
 
 企业首页扩展：`content/company.ts` 管理能力、质量和项目流程；`content/home.ts` 管理应用组合、公司咨询模板和 FAQ。企业实拍位于 `public/images/company/`，逐张来源与哈希见 `content/company-image-provenance.json`。公司介绍页复用企业能力板块。

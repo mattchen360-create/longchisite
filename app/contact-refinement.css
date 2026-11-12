@@ -1,0 +1,789 @@
+/* Persistent contact access and two focused homepage revisions. */
+.contact-tools {
+  position: fixed;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 74px;
+  z-index: 45;
+  background: #fff;
+  color: var(--blue);
+  box-shadow: 0 6px 30px #001a661a;
+  border-radius: 5px;
+}
+.contact-tools-main {
+  display: flex;
+  flex-direction: column;
+}
+.contact-tool {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 77px;
+  padding: 12px 5px;
+  border: 0;
+  background: #fff;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 650;
+  text-decoration: none;
+  --contact-icon-bg: white;
+}
+.contact-tools-main > :first-child {
+  border-radius: 5px 5px 0 0;
+}
+.contact-tool.contact-whatsapp {
+  background: var(--yellow);
+  color: var(--blue);
+}
+.contact-tool:hover,
+.contact-tool:focus-visible {
+  background: var(--blue);
+  color: #fff;
+  --contact-icon-bg: #0028a0;
+}
+.contact-tool.contact-whatsapp:hover,
+.contact-tool.contact-whatsapp:focus-visible {
+  background: #ffd05a;
+  color: var(--blue);
+}
+.contact-enquiry {
+  display: none;
+}
+.contact-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translate(5px, -50%);
+  padding: 14px 18px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 550;
+  background: var(--blue);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  pointer-events: none;
+}
+.contact-tool:hover > .contact-tooltip,
+.contact-tool:focus-visible > .contact-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -50%);
+}
+.contact-top {
+  min-height: 63px;
+  font-size: 9px;
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+.contact-top.is-visible {
+  display: flex;
+}
+.contact-socials {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.contact-socials a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.contact-socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.contact-rail-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.contact-rail-socials a {
+  min-width: 44px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  min-height: 62px;
+  padding: 10px 4px;
+}
+.contact-rail-socials a > span {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+}
+.contact-rail-socials a:hover,.contact-rail-socials a:focus-visible {
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+}
+.footer-contact-channels {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 17px 0 12px;
+}
+.footer-contact-channels > a,
+.footer-contact-channels > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  min-height: 40px;
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  --contact-icon-bg: #0028a0;
+}
+.footer-contact-channels > a:hover,
+.footer-contact-channels > button:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.footer-contact > .contact-socials {
+  margin-block: 12px;
+  font-size: 12px;
+}
+.contact-dialog {
+  position: fixed;
+  width: min(720px, calc(100% - 36px));
+  max-width: none;
+  max-height: calc(100dvh - 40px);
+  border: 0;
+  padding: 0;
+  margin: auto;
+  color: var(--blue);
+  background: #fff;
+  overflow: auto;
+}
+.contact-dialog::backdrop {
+  background: #001a66bf;
+}
+.contact-dialog-inner {
+  padding: 36px;
+}
+.contact-dialog-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 27px;
+}
+.contact-dialog-head p {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.premium-site .contact-dialog-head h2 {
+  font-size: 34px;
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+.contact-dialog-close {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  border: 0;
+  background: #f2f7ff;
+  color: var(--blue);
+}
+.contact-qr-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.contact-qr {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.contact-person-monogram {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--yellow);
+  font-size: 22px;
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+.contact-person h3 {
+  font-size: 25px;
+  letter-spacing: -0.6px;
+}
+.contact-person > p {
+  font-size: 13px;
+  line-height: 1.9;
+  margin-block: 7px 16px;
+}
+.contact-person > .button {
+  font-size: 12px;
+  padding: 12px 16px;
+  min-height: 45px;
+  gap: 12px;
+}
+.contact-dialog-alternatives {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #f2f7ff;
+  padding: 20px;
+  margin-top: 28px;
+}
+.contact-dialog-alternatives p {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.contact-dialog-alternatives a {
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-dialog-alternatives button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  min-height: 44px;
+  padding: 0;
+  background: transparent;
+  font-size: 12px;
+  color: var(--blue);
+}
+body:has(.contact-dialog[open]) {
+  overflow: hidden;
+}
+body:has(dialog[open]) .contact-tools {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.application-atlas {
+  background: #f2f7ff;
+}
+.application-atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 340px 320px;
+  gap: 18px;
+  position: relative;
+}
+.application-atlas-card {
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+.application-atlas-card-0 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+.application-atlas-card-1 {
+  grid-column: span 6;
+}
+.application-atlas-card-2,
+.application-atlas-card-3 {
+  grid-column: span 3;
+}
+.application-atlas-card > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+.application-atlas-card a:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #001a6600 12%,
+    #001a6638 36%,
+    #001a66f0 100%
+  );
+}
+.application-atlas-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.application-atlas-copy {
+  position: absolute;
+  inset: auto 27px 25px;
+  z-index: 1;
+}
+.application-atlas-copy h3 {
+  font-size: 26px;
+  line-height: 1.18;
+  letter-spacing: -0.7px;
+  margin-bottom: 13px;
+}
+.application-atlas-card-0 h3 {
+  font-size: 44px;
+  letter-spacing: -1.5px;
+}
+.application-atlas-copy p {
+  font-size: 15px;
+  line-height: 1.85;
+  max-width: 450px;
+  margin-block: 18px;
+}
+.application-atlas-lines {
+  display: block;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.application-atlas-action {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.application-atlas-card-0 .application-atlas-action {
+  display: inline-flex;
+  background: var(--yellow);
+  color: var(--blue);
+  padding: 14px 18px;
+}
+.application-atlas-card-2 .application-atlas-copy,
+.application-atlas-card-3 .application-atlas-copy {
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+}
+.application-atlas-card-2 h3,
+.application-atlas-card-3 h3 {
+  font-size: 24px;
+}
+.application-atlas-card-2 .application-atlas-action,
+.application-atlas-card-3 .application-atlas-action {
+  font-size: 11px;
+  gap: 8px;
+}
+.application-atlas-note {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.premium-site .document-showroom .home-document-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.premium-site .document-showroom .home-document-list article {
+  display: block;
+  padding: 0;
+  border: 0;
+}
+.document-product-image {
+  position: relative;
+  display: block;
+  background: #f2f7ff;
+  padding: 28px;
+  overflow: hidden;
+}
+.document-product-image img {
+  width: 100%;
+  height: 270px;
+  object-fit: contain;
+}
+.document-product-image > span {
+  display: block;
+  margin-top: 22px;
+  font-size: 11px;
+}
+.document-product-copy {
+  padding: 25px 0;
+}
+.premium-site .document-showroom .home-document-list h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.premium-site .document-showroom .home-document-list p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.premium-site .document-showroom .document-product-copy .text-link {
+  margin: 22px 0 0;
+  font-size: 14px;
+}
+.document-company-request {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #001a66;
+  color: #fff;
+  padding: 38px 45px;
+}
+.document-company-request > div {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 45px;
+  align-items: center;
+}
+.document-company-request h3 {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+.document-company-request p {
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 400px;
+}
+.document-company-request > .button {
+  flex-shrink: 0;
+  font-size: 12px;
+  padding-inline: 18px;
+}
+
+@media (min-width: 1181px) {
+  .premium-site:has(.contact-tools) {
+    padding-right: 92px;
+  }
+  .contact-tools {
+    right: 9px;
+    width: 74px;
+  }
+  .prem-hero-product,
+  .prem-hero-illustration {
+    right: max(40px, calc((100vw - 1452px) / 2));
+  }
+  .premium-site .prem-main-nav {
+    gap: 24px;
+  }
+}
+@media (max-width: 1180px) and (min-width: 761px) {
+  .contact-tools {
+    width: 61px;
+    right: 8px;
+  }
+  .contact-tool {
+    min-height: 69px;
+    font-size: 9px;
+  }
+  .contact-top {
+    min-height: 54px;
+  }
+  .contact-tools .contact-enquiry {
+    display: none;
+  }
+  .contact-tooltip {
+    font-size: 12px;
+  }
+  .premium-site:has(.contact-tools) {
+    padding-right: 77px;
+  }
+  .premium-site .header-inner {
+    gap: 16px;
+  }
+  .premium-site .prem-main-nav {
+    gap: 18px;
+  }
+  .premium-site .header-cta {
+    margin-left: 0;
+  }
+  .premium-site .site-header .brand {
+    width: 160px;
+  }
+  .application-atlas-grid {
+    grid-template-rows: 300px 285px;
+    gap: 14px;
+  }
+  .application-atlas-copy {
+    inset: auto 22px 22px;
+  }
+  .application-atlas-card-0 h3 {
+    font-size: 36px;
+  }
+  .application-atlas-copy p {
+    font-size: 14px;
+  }
+  .application-atlas-card-2 h3,
+  .application-atlas-card-3 h3 {
+    font-size: 21px;
+  }
+  .application-atlas-card-2 .application-atlas-lines,
+  .application-atlas-card-3 .application-atlas-lines {
+    font-size: 10px;
+  }
+  .application-atlas-card-2 .application-atlas-action,
+  .application-atlas-card-3 .application-atlas-action {
+    font-size: 10px;
+  }
+  .document-company-request > div {
+    display: block;
+  }
+  .document-company-request p {
+    margin-top: 15px;
+  }
+  .document-product-image {
+    padding: 22px;
+  }
+  .document-product-image img {
+    height: 210px;
+  }
+}
+@media (max-width: 760px) {
+  .premium-site:has(.contact-tools) {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+  .contact-tools {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 -5px 22px #001a6615;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: #fff;
+  }
+  .contact-tools-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contact-tool,
+  .contact-tool.contact-enquiry {
+    display: flex;
+    min-height: 72px;
+    gap: 5px;
+    border-radius: 0 !important;
+    font-size: 10px;
+    padding-block: 9px;
+  }
+  .contact-tool.contact-whatsapp {
+    background: var(--blue);
+    color: #fff;
+  }
+  .contact-tool.contact-enquiry {
+    background: var(--yellow);
+    color: var(--blue);
+  }
+  .contact-tooltip,
+  .contact-top,
+  .contact-top.is-visible,
+  .contact-rail-socials {
+    display: none;
+  }
+  .premium-site .cookie-panel {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+  .contact-dialog {
+    width: calc(100% - 28px);
+    max-height: calc(100dvh - 28px);
+  }
+  .contact-dialog-inner {
+    padding: 23px;
+  }
+  .contact-dialog-head {
+    gap: 12px;
+    margin-bottom: 17px;
+  }
+  .premium-site .contact-dialog-head h2 {
+    font-size: 27px;
+    letter-spacing: -0.9px;
+  }
+  .contact-dialog-head p {
+    font-size: 11px;
+  }
+  .contact-qr-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .contact-qr {
+    width: min(230px, 100%);
+    margin-inline: auto;
+  }
+  .contact-person {
+    text-align: center;
+  }
+  .contact-person-monogram {
+    display: none;
+  }
+  .contact-person h3 {
+    font-size: 23px;
+  }
+  .contact-person > p {
+    font-size: 12px;
+    margin-block: 5px 12px;
+  }
+  .contact-person > .button {
+    min-height: 44px;
+  }
+  .contact-dialog-alternatives {
+    margin-top: 20px;
+    padding: 16px;
+    gap: 8px;
+  }
+  .contact-dialog-alternatives a {
+    font-size: 12px;
+  }
+  .application-atlas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 440px 300px 310px;
+    gap: 14px;
+  }
+  .application-atlas-card-0 {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .application-atlas-card-1 {
+    grid-column: span 2;
+  }
+  .application-atlas-card-2,
+  .application-atlas-card-3 {
+    grid-column: span 1;
+  }
+  .application-atlas-copy {
+    inset: auto 23px 23px;
+  }
+  .application-atlas-card-0 h3 {
+    font-size: 35px;
+  }
+  .application-atlas-copy p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .application-atlas-copy h3 {
+    font-size: 29px;
+  }
+  .application-atlas-card-2 .application-atlas-copy,
+  .application-atlas-card-3 .application-atlas-copy {
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+  }
+  .application-atlas-card-2 h3,
+  .application-atlas-card-3 h3 {
+    font-size: 22px;
+  }
+  .application-atlas-card-2 .application-atlas-lines,
+  .application-atlas-card-3 .application-atlas-lines {
+    font-size: 9px;
+  }
+  .application-atlas-card-2 .application-atlas-action,
+  .application-atlas-card-3 .application-atlas-action {
+    font-size: 10px;
+    gap: 5px;
+    margin-top: 16px;
+  }
+  .application-atlas-action > svg {
+    flex-shrink: 0;
+    width: 17px;
+  }
+  .premium-site .document-showroom .home-document-list {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .premium-site .document-showroom .home-document-list article {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 23px;
+    align-items: center;
+  }
+  .document-product-image {
+    padding: 14px;
+  }
+  .document-product-image img {
+    height: 160px;
+  }
+  .document-product-image > span {
+    font-size: 9px;
+    margin-top: 10px;
+  }
+  .document-product-copy {
+    padding-block: 0;
+  }
+  .premium-site .document-showroom .home-document-list h3 {
+    font-size: 20px;
+  }
+  .premium-site .document-showroom .home-document-list p {
+    font-size: 12px;
+  }
+  .premium-site .document-showroom .document-product-copy .text-link {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  .document-company-request {
+    display: block;
+    padding: 28px;
+    margin-top: 38px;
+  }
+  .document-company-request > div {
+    display: block;
+  }
+  .document-company-request h3 {
+    font-size: 28px;
+  }
+  .document-company-request p {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+  .document-company-request > .button {
+    margin-top: 25px;
+  }
+}
+@media (max-height: 650px) and (min-width: 761px) {
+  .contact-tool {
+    min-height: 58px;
+    gap: 5px;
+    padding-block: 8px;
+  }
+  .contact-top {
+    min-height: 50px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .contact-tooltip {
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease,
+      visibility 0.15s;
+  }
+  @media (hover: hover) {
+    .application-atlas-card img {
+      transition: transform 0.6s ease;
+    }
+    .application-atlas-card a:hover img {
+      transform: scale(1.035);
+    }
+    .application-atlas-card a:hover .application-atlas-action {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  }
+  .contact-dialog[open] {
+    animation: contact-appear 0.18s ease-out;
+  }
+  @keyframes contact-appear {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

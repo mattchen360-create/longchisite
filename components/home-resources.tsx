@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileText, MessageSquare, Plus } from "lucide-react";
+import { ArrowUpRight, MessageSquare, Plus } from "lucide-react";
 import { products, site } from "@/content/site";
 import { DownloadLink } from "@/components/download-link";
 import { homeQuestions } from "@/content/home";
@@ -7,53 +7,68 @@ export function HomeResources() {
   const documents = products.filter((p) => p.download).slice(0, 3);
   return (
     <section
-      className="home-resources home-chapter container"
+      className="home-resources home-chapter container document-showroom"
       id="resources"
       aria-labelledby="resources-title"
     >
       <div className="home-chapter-heading">
         <div>
-          <span className="eyebrow">Open the details</span>
+          <span className="eyebrow">The technical library</span>
           <h2 id="resources-title">
-            Technical documents
+            Get closer to
             <br />
-            for your review.
+            the specifications.
           </h2>
         </div>
         <a href="/resources/" className="text-link">
           All technical resources <ArrowUpRight size={18} aria-hidden="true" />
         </a>
       </div>
-      <div className="home-resource-layout">
+      <div className="document-showroom-layout">
         <div className="home-document-list">
           {documents.map((p) => (
             <article key={p.slug}>
-              <div className="home-file-icon">
-                <FileText size={25} strokeWidth={1.4} aria-hidden="true" />
-                <span>{p.download!.endsWith(".pdf") ? "PDF" : "DOCX"}</span>
-              </div>
-              <div>
+              <a
+                className="document-product-image"
+                href={`/products/${p.slug}/`}
+                aria-label={`View ${p.model}`}
+              >
+                <img
+                  src={p.image}
+                  alt={`${p.model} ${p.title}`}
+                  width="400"
+                  height="340"
+                  loading="lazy"
+                />
+                <span>
+                  {p.download!.endsWith(".pdf")
+                    ? "PDF specification"
+                    : "Word specification"}
+                </span>
+              </a>
+              <div className="document-product-copy">
                 <h3>
                   <a href={`/products/${p.slug}/`}>{p.model}</a>
                 </h3>
                 <p>{p.title}</p>
+                <DownloadLink href={p.download!} model={p.model} />
               </div>
-              <DownloadLink href={p.download!} model={p.model} />
             </article>
           ))}
         </div>
-        <aside className="home-company-request">
-          <FileText size={35} strokeWidth={1.2} aria-hidden="true" />
-          <h3>
-            Taking a closer look
-            <br />
-            at LONGCHI?
-          </h3>
-          <p>
-            Ask for company information, relevant facility details and the
-            documents your procurement team needs.
-          </p>
-          <a href="/contact/?topic=company-profile" className="text-link">
+        <aside className="document-company-request">
+          <div>
+            <h3>
+              Taking a closer look
+              <br />
+              at LONGCHI?
+            </h3>
+            <p>
+              Ask for company information, relevant facility details and the
+              documents your procurement team needs.
+            </p>
+          </div>
+          <a href="/contact/?topic=company-profile" className="button">
             Request company information{" "}
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
