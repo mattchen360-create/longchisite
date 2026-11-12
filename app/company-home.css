@@ -269,7 +269,7 @@
   position: relative;
   min-width: 0;
 }
-.story-photo > img {
+.story-photo-window > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -287,7 +287,7 @@
   gap: 80px;
   align-items: center;
 }
-.company-portrait-visual .story-photo > img {
+.company-portrait-visual .story-photo-window > img {
   height: 350px;
   object-position: center;
 }
@@ -351,7 +351,7 @@
 .factory-story-main {
   position: relative;
 }
-.factory-story-main .story-photo > img {
+.factory-story-main .story-photo-window > img {
   height: 630px;
 }
 .factory-story-main .gallery-open {
@@ -360,7 +360,7 @@
   right: 20px;
   bottom: 58px;
 }
-.factory-story-side .story-photo > img {
+.factory-story-side .story-photo-window > img {
   height: 310px;
 }
 .factory-story-side > div {
@@ -382,7 +382,7 @@
   gap: 80px;
   align-items: center;
 }
-.engineering-story-layout > .story-photo > img {
+.engineering-story-layout > .story-photo > .story-photo-window > img {
   height: 620px;
 }
 .engineering-topics {
@@ -435,7 +435,7 @@
   gap: 80px;
   align-items: center;
 }
-.quality-story .story-photo > img {
+.quality-story .story-photo-window > img {
   height: 560px;
 }
 .quality-story ul {
@@ -506,7 +506,7 @@
   line-height: 1.9;
   max-width: 650px;
 }
-.people-story > .container > .story-photo > img {
+.people-story > .container > .story-photo > .story-photo-window > img {
   height: 520px;
   object-position: center 55%;
 }
@@ -534,13 +534,13 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 35px;
 }
-.exchange-story-grid article:first-child .story-photo > img {
+.exchange-story-grid article:first-child .story-photo-window > img {
   height: 400px;
 }
 .exchange-story-grid article:last-child {
   padding-top: 85px;
 }
-.exchange-story-grid article:last-child .story-photo > img {
+.exchange-story-grid article:last-child .story-photo-window > img {
   height: 315px;
 }
 .exchange-story-grid h3 {
@@ -560,7 +560,7 @@
   gap: 90px;
   align-items: center;
 }
-.exhibition-story .story-photo > img {
+.exhibition-story .story-photo-window > img {
   height: 610px;
 }
 .exhibition-story-links {
@@ -920,7 +920,7 @@
   .history-moments article > span {
     font-size: 68px;
   }
-  .company-portrait-visual .story-photo > img {
+  .company-portrait-visual .story-photo-window > img {
     height: 310px;
   }
   .company-portrait-note {
@@ -931,16 +931,16 @@
   .company-portrait-note strong {
     font-size: 21px;
   }
-  .factory-story-main .story-photo > img {
+  .factory-story-main .story-photo-window > img {
     height: 570px;
   }
-  .factory-story-side .story-photo > img {
+  .factory-story-side .story-photo-window > img {
     height: 260px;
   }
   .factory-story-side h3 {
     font-size: 27px;
   }
-  .engineering-story-layout > .story-photo > img {
+  .engineering-story-layout > .story-photo > .story-photo-window > img {
     height: 590px;
   }
   .engineering-topics > div {
@@ -953,7 +953,7 @@
   .credential-facts > div {
     grid-template-columns: 100px 1fr;
   }
-  .quality-story .story-photo > img {
+  .quality-story .story-photo-window > img {
     height: 510px;
   }
   .history-moments h3 {
@@ -1028,7 +1028,7 @@
     grid-template-columns: 1.15fr 1fr;
     gap: 25px;
   }
-  .factory-story-main .story-photo > img {
+  .factory-story-main .story-photo-window > img {
     height: 620px;
   }
   .people-story-values {
@@ -1053,7 +1053,7 @@
   .support-story-list {
     padding: 25px;
   }
-  .exhibition-story .story-photo > img {
+  .exhibition-story .story-photo-window > img {
     height: 640px;
   }
   .credential-facts > div {
@@ -1201,7 +1201,7 @@
     grid-template-columns: 1fr;
     gap: 35px;
   }
-  .company-portrait-visual .story-photo > img {
+  .company-portrait-visual .story-photo-window > img {
     height: 260px;
   }
   .company-portrait-note {
@@ -1238,14 +1238,14 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  .factory-story-main .story-photo > img {
+  .factory-story-main .story-photo-window > img {
     height: 340px;
   }
   .factory-story-main .gallery-open {
     right: 14px;
     bottom: 55px;
   }
-  .factory-story-side .story-photo > img {
+  .factory-story-side .story-photo-window > img {
     height: 270px;
   }
   .factory-story-side > div {
@@ -1257,7 +1257,7 @@
   .factory-story-side p {
     font-size: 15px;
   }
-  .engineering-story-layout > .story-photo > img {
+  .engineering-story-layout > .story-photo > .story-photo-window > img {
     height: 310px;
   }
   .engineering-topics > div {
@@ -1281,7 +1281,7 @@
   .workshop-film video {
     max-height: none;
   }
-  .quality-story .story-photo > img {
+  .quality-story .story-photo-window > img {
     height: 320px;
   }
   .quality-story li {
@@ -1300,7 +1300,7 @@
   .people-story-heading > p:last-child {
     font-size: 15px;
   }
-  .people-story > .container > .story-photo > img {
+  .people-story > .container > .story-photo > .story-photo-window > img {
     height: 310px;
   }
   .people-story-values {
@@ -1318,8 +1318,8 @@
     grid-template-columns: 1fr;
     gap: 35px;
   }
-  .exchange-story-grid article:first-child .story-photo > img,
-  .exchange-story-grid article:last-child .story-photo > img {
+  .exchange-story-grid article:first-child .story-photo-window > img,
+  .exchange-story-grid article:last-child .story-photo-window > img {
     height: 270px;
   }
   .exchange-story-grid article:last-child {
@@ -1331,7 +1331,7 @@
   .exchange-story-grid p {
     font-size: 14px;
   }
-  .exhibition-story .story-photo > img {
+  .exhibition-story .story-photo-window > img {
     height: 410px;
   }
   .exhibition-story-links {

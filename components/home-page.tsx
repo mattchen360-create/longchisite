@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { site, solutions } from "@/content/site";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { HomeComposition } from "@/components/home-composition";
+import { HomeMotion } from "@/components/home-motion";
 import {
   PremiumSolutions,
   PremiumDelivery,
@@ -83,6 +84,7 @@ export function HomePage({ review = false }: { review?: boolean } = {}) {
       className={`premium-home company-first-home ${review ? "home-review" : ""}`}
     >
       <HomeComposition sections={sections} review={review} />
+      <HomeMotion />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

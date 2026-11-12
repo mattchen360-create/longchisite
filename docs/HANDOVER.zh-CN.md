@@ -10,6 +10,8 @@
 
 ## 更新内容
 
+最新动效实现见 `docs/MOTION-DESIGN.zh-CN.md`。`app/motion.css` 最后加载；`components/home-motion.tsx` 管理首页照片的桌面视差与一次性裁切呈现，并响应系统减少动态设置。Banner 保持 4 张手动切换，增加方向揭幕、分行标题和选择底色滑动；没有恢复被撤下的小卡片。
+
 公司首页候选版以 `docs/COMPANY-HOME-OPTIONS.zh-CN.md` 为最新首页说明：20 个可筛选板块、4 张统一轮播 Banner，首页不再加载产品资料下载与型号展厅。`components/home-composition.tsx` 组合真实内容；`content/home-modules.ts` 管理中文筛选清单。用户打开 `/review/` 可逐块隐藏/恢复、切换轮播预览、复制结果；选择仅在当前浏览器保存，不修改普通首页或数据库。该页 noindex，并从 sitemap 排除。`components/company-story.tsx`、`corporate-hero.tsx` 和最后加载的 `app/company-home.css` 管理本轮内容与样式。原产品/资源页继续维护各自内容。
 
 新增公司实拍、历史证书与完整车间视频的来源及哈希见 `content/company-story-provenance.json`；视频仅用户点击播放，`preload="none"`。历史、资质、展会和工厂内容按湖南主体标注，国际询盘继续由深圳主体接收。

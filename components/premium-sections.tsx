@@ -29,7 +29,10 @@ export function PremiumSolutions() {
   const [active, setActive] = useState(0),
     s = solutions[active],
     v = solutionVisuals[s.slug];
+  const [previous, setPrevious] = useState<number | null>(null);
   function select(i: number) {
+    if (i === active) return;
+    setPrevious(active);
     setActive(i);
     track("explore_solution", { product_line: solutions[i].slug });
   }
@@ -77,7 +80,16 @@ export function PremiumSolutions() {
                 <span>
                   <strong>{line.name}</strong>
                   <small>{line.label}</small>
-                  {active === i && <p>{line.description}</p>}
+                  <span
+                    className="solution-description"
+                    aria-hidden={active !== i}
+                  >
+                    <span>
+                      <span className="solution-description-text">
+                        {line.description}
+                      </span>
+                    </span>
+                  </span>
                 </span>
                 <ArrowUpRight size={24} aria-hidden="true" />
               </button>
@@ -91,15 +103,18 @@ export function PremiumSolutions() {
             tabIndex={0}
           >
             <div className="prem-solution-visual">
-              <img
-                key={v.scene}
-                className="prem-solution-scene"
-                src={v.scene}
-                alt={v.alt}
-                width="1536"
-                height="1024"
-                loading="lazy"
-              />
+              {solutions.map((line, i) => (
+                <img
+                  key={line.slug}
+                  className={`prem-solution-scene solution-motion-scene ${i === active ? "is-current" : i === previous ? "is-outgoing" : ""}`}
+                  src={solutionVisuals[line.slug].scene}
+                  alt={i === active ? v.alt : ""}
+                  aria-hidden={i !== active}
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+              ))}
               <span className="prem-image-note">Illustrative application</span>
             </div>
             <a href={`/solutions/${s.slug}/`} className="prem-solution-action">

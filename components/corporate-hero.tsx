@@ -1,5 +1,12 @@
 "use client";
-import { useRef, useState, type KeyboardEvent } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type PointerEvent,
+} from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { bannerSlides } from "@/content/banner";
 
@@ -8,11 +15,55 @@ export function CorporateHero({
   onSlideChange,
 }: { activeSlide?: number; onSlideChange?: (index: number) => void } = {}) {
   const [internal, setInternal] = useState(0);
+  const [transition, setTransition] = useState<{
+    previous: number | null;
+    direction: number;
+  }>({ previous: null, direction: 1 });
+  const stage = useRef<HTMLDivElement>(null),
+    frame = useRef(0),
+    requestedDirection = useRef<number | null>(null);
   const start = useRef<{ x: number; y: number } | null>(null);
   const active = activeSlide ?? internal,
     slide = bannerSlides[active];
+  const last = useRef(active);
+  useLayoutEffect(() => {
+    if (last.current !== active) {
+      setTransition({
+        previous: last.current,
+        direction:
+          requestedDirection.current ?? (active > last.current ? 1 : -1),
+      });
+      last.current = active;
+      requestedDirection.current = null;
+    }
+  }, [active]);
+  useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  function pointer(e: PointerEvent<HTMLDivElement>) {
+    if (
+      e.pointerType !== "mouse" ||
+      !matchMedia(
+        "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+      ).matches
+    )
+      return;
+    const r = e.currentTarget.getBoundingClientRect(),
+      x = (e.clientX - r.left) / r.width - 0.5,
+      y = (e.clientY - r.top) / r.height - 0.5;
+    cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      stage.current?.style.setProperty("--banner-x", String(x));
+      stage.current?.style.setProperty("--banner-y", String(y));
+    });
+  }
+  function resetPointer() {
+    cancelAnimationFrame(frame.current);
+    stage.current?.style.setProperty("--banner-x", "0");
+    stage.current?.style.setProperty("--banner-y", "0");
+  }
   function select(index: number) {
     const next = (index + bannerSlides.length) % bannerSlides.length;
+    if (next === active) return;
+    requestedDirection.current = index < active ? -1 : 1;
     setInternal(next);
     onSlideChange?.(next);
   }
@@ -30,11 +81,15 @@ export function CorporateHero({
   return (
     <section
       className="home-carousel"
+      data-direction={transition.direction < 0 ? "previous" : "next"}
       aria-label="LONGCHI highlights"
       aria-roledescription="carousel"
     >
       <div
         className="home-carousel-stage"
+        ref={stage}
+        onPointerMove={pointer}
+        onPointerLeave={resetPointer}
         id="home-banner-panel"
         role="tabpanel"
         aria-labelledby={`home-banner-tab-${active}`}
@@ -55,22 +110,35 @@ export function CorporateHero({
           }
         }}
       >
-        <img
-          key={slide.image}
-          className="home-carousel-image"
-          src={slide.image}
-          alt={slide.alt}
-          width="1914"
-          height="1000"
-          fetchPriority="high"
-        />
+        <div className="home-carousel-images">
+          {bannerSlides.map((item, i) => (
+            <div
+              key={item.image}
+              className={`home-carousel-image-layer ${i === active ? "is-current" : i === transition.previous ? "is-outgoing" : ""}`}
+              aria-hidden={i !== active}
+            >
+              <img
+                className="home-carousel-image"
+                src={item.image}
+                alt={i === active ? item.alt : ""}
+                width="1914"
+                height="1000"
+                fetchPriority={i === 0 ? "high" : "low"}
+                loading={i === 0 ? "eager" : "lazy"}
+              />
+            </div>
+          ))}
+        </div>
         <div className="home-carousel-shade" aria-hidden="true" />
-        <div className="container home-carousel-copy">
+        <div className="container home-carousel-copy" key={active}>
           <p>{slide.label}</p>
           <h1>
-            {slide.title[0]}
-            <br />
-            {slide.title[1]}
+            <span className="home-carousel-line">
+              <span>{slide.title[0]}</span>
+            </span>
+            <span className="home-carousel-line">
+              <span>{slide.title[1]}</span>
+            </span>
           </h1>
           <p className="home-carousel-description">{slide.description}</p>
           <div className="home-carousel-actions">
@@ -90,6 +158,11 @@ export function CorporateHero({
             role="tablist"
             aria-label="Choose a banner"
           >
+            <span
+              className="home-carousel-indicator"
+              aria-hidden="true"
+              style={{ transform: `translateX(${active * 100}%)` }}
+            />
             {bannerSlides.map((s, i) => (
               <button
                 type="button"

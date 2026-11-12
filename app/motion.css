@@ -1,0 +1,338 @@
+/* LONGCHI motion: directional image edits, typeset entrances, measured photographic depth. */
+.home-carousel-images {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+}
+.home-carousel-image-layer {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 0;
+}
+.home-carousel-image-layer.is-current {
+  visibility: visible;
+  z-index: 1;
+}
+.home-carousel-image-layer.is-outgoing {
+  visibility: visible;
+  z-index: 0;
+}
+.home-carousel-images .home-carousel-image {
+  z-index: auto;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  max-width: none;
+  animation: none;
+}
+.home-carousel-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.13em;
+  margin-bottom: -0.13em;
+}
+.home-carousel-line > span {
+  display: block;
+}
+.home-carousel-tabs {
+  position: relative;
+  isolation: isolate;
+}
+.home-carousel-indicator {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 25%;
+  background: var(--yellow);
+  z-index: -1;
+  pointer-events: none;
+}
+.home-carousel-tabs button[aria-selected="true"] {
+  background: transparent;
+}
+.home-carousel-tabs button {
+  position: relative;
+}
+.home-carousel-tabs button[aria-selected="true"]:hover {
+  background: transparent;
+}
+.story-photo-window {
+  overflow: hidden;
+  position: relative;
+  background: #f2f7ff;
+}
+.story-photo-window > img {
+  display: block;
+}
+.solution-description {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+.solution-description > span {
+  min-height: 0;
+  overflow: hidden;
+}
+.solution-description-text {
+  display: block;
+  font-size: 15px;
+  line-height: 1.8;
+  padding-top: 17px;
+  font-weight: 400;
+}
+.prem-solution-index > button[aria-selected="true"] .solution-description {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.solution-motion-scene {
+  visibility: hidden;
+  z-index: 0;
+}
+.solution-motion-scene.is-current {
+  visibility: visible;
+  z-index: 1;
+}
+.solution-motion-scene.is-outgoing {
+  visibility: visible;
+  z-index: 0;
+}
+.prem-solution-visual .prem-image-note {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-carousel-image-layer.is-current {
+    animation: longchi-image-next 900ms cubic-bezier(0.22, 0.7, 0.18, 1) both;
+  }
+  .home-carousel[data-direction="previous"]
+    .home-carousel-image-layer.is-current {
+    animation-name: longchi-image-previous;
+  }
+  .home-carousel-image-layer.is-current > .home-carousel-image {
+    animation: longchi-image-depth 1400ms cubic-bezier(0.16, 0.65, 0.2, 1) both;
+  }
+  .home-carousel-copy > p:first-child {
+    animation: longchi-copy-enter 600ms 100ms both;
+  }
+  .home-carousel-line > span {
+    animation: longchi-title-enter 850ms cubic-bezier(0.2, 0.75, 0.2, 1) 100ms
+      both;
+  }
+  .home-carousel-line:nth-child(2) > span {
+    animation-delay: 200ms;
+  }
+  .home-carousel-copy > .home-carousel-description {
+    animation: longchi-copy-enter 650ms 260ms both;
+  }
+  .home-carousel-copy > .home-carousel-actions {
+    animation: longchi-copy-enter 650ms 340ms both;
+  }
+  .home-carousel-indicator {
+    transition: transform 600ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  }
+  .home-carousel-tabs button {
+    transition:
+      color 250ms,
+      background-color 250ms;
+  }
+  .home-carousel-images .home-carousel-image {
+    translate: calc(var(--banner-x, 0) * -12px) calc(var(--banner-y, 0) * -10px);
+    transition: translate 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .story-photo-window[data-depth="true"] > img {
+    transform: scale(1.065) translateY(var(--photo-shift, 0px));
+    transform-origin: center;
+    transition: filter 400ms ease;
+  }
+  .story-photo-window[data-depth="true"]:hover > img {
+    filter: contrast(1.025);
+  }
+  .solution-description {
+    transition:
+      grid-template-rows 450ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      opacity 350ms ease;
+  }
+  .solution-motion-scene.is-current {
+    animation: longchi-solution-enter 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .solution-motion-scene.is-outgoing {
+    animation: none;
+  }
+  .prem-solution-index > button {
+    transition:
+      background-color 300ms,
+      color 300ms;
+  }
+  .prem-solution-index > button > svg {
+    transition: transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .prem-solution-index > button[aria-selected="true"] > svg {
+    transform: translate(3px, -3px);
+  }
+  .company-first-home .button {
+    transition:
+      transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      background-color 220ms,
+      color 220ms;
+  }
+  .company-first-home .button > svg,
+  .story-link > svg,
+  .prem-solution-action svg,
+  .home-carousel-actions > a:last-child {
+    transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .company-first-home .button:active {
+    transform: translateY(0) scale(0.985);
+  }
+  .prem-mega {
+    animation: longchi-menu-enter 220ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .prem-mobile-drawer[open] {
+    animation: longchi-drawer-enter 280ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .contact-tool > svg {
+    transition: transform 250ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .application-atlas-copy {
+    transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .application-atlas-card a:after {
+    transition: opacity 400ms;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .company-first-home .button:hover {
+      transform: translateY(-2px);
+    }
+    .company-first-home .button:hover > svg,
+    .story-link:hover > svg,
+    .prem-solution-action:hover svg {
+      transform: translate(3px, -3px);
+    }
+    .home-carousel-arrows > button:hover > svg {
+      transform: translateX(3px);
+    }
+    .home-carousel-arrows > button:first-child:hover > svg {
+      transform: translateX(-3px);
+    }
+    .home-carousel-arrows > button > svg {
+      transition: transform 250ms;
+    }
+    .contact-tool:hover > svg {
+      transform: scale(1.1);
+    }
+    .application-atlas-card a:hover .application-atlas-copy {
+      transform: translateY(-6px);
+    }
+  }
+  @keyframes longchi-image-next {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  @keyframes longchi-image-previous {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  @keyframes longchi-image-depth {
+    from {
+      transform: scale(1.055);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @keyframes longchi-title-enter {
+    from {
+      transform: translateY(112%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes longchi-copy-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes longchi-solution-enter {
+    from {
+      clip-path: inset(0 0 0 100%);
+      transform: scale(1.025);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+      transform: scale(1);
+    }
+  }
+  @keyframes longchi-menu-enter {
+    from {
+      opacity: 0;
+      transform: translateY(-7px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes longchi-drawer-enter {
+    from {
+      opacity: 0.5;
+      transform: translateX(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel-image-layer,
+  .home-carousel-image,
+  .home-carousel-copy > *,
+  .home-carousel-line > span,
+  .solution-motion-scene {
+    animation: none !important;
+  }
+  .home-carousel-indicator,
+  .solution-description,
+  .prem-solution-index > button,
+  .prem-mega,
+  .prem-mobile-drawer,
+  .company-first-home .button {
+    transition: none !important;
+    animation: none !important;
+  }
+  .story-photo-window > img {
+    transform: none !important;
+  }
+  .home-carousel-images .home-carousel-image {
+    translate: none;
+    transform: none;
+  }
+}
+@media (max-width: 760px) {
+  .solution-description-text {
+    font-size: 14px;
+  }
+  .home-carousel-images .home-carousel-image {
+    translate: none;
+  }
+  .home-carousel-line {
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
+  }
+}

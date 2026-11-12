@@ -14,6 +14,7 @@ import "./premium.css";
 import "./contact-refinement.css";
 import "./company-home.css";
 import "./home-carousel.css";
+import "./motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),

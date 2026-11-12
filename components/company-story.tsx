@@ -21,7 +21,9 @@ function Photo({
 }) {
   return (
     <figure className={`story-photo ${className}`}>
-      <img src={src} alt={alt} width="1600" height="1000" loading="lazy" />
+      <div className="story-photo-window">
+        <img src={src} alt={alt} width="1600" height="1000" loading="lazy" />
+      </div>
       <figcaption>{caption}</figcaption>
     </figure>
   );
